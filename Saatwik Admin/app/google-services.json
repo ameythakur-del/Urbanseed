@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1024542344823",
+    "firebase_url": "https://saatwik-be896-default-rtdb.firebaseio.com",
+    "project_id": "saatwik-be896",
+    "storage_bucket": "saatwik-be896.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024542344823:android:291acf2e63aad68b262872",
+        "android_client_info": {
+          "package_name": "com.example.saatwikadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024542344823-7par7v5dpp0n1o0ialb29egdj3qlnft9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs3sfjGpHvgwgOba0cqkGzteR8l2GZre0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024542344823-7par7v5dpp0n1o0ialb29egdj3qlnft9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024542344823:android:bb97c347a7e064d6262872",
+        "android_client_info": {
+          "package_name": "com.mondkars.saatwik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024542344823-7par7v5dpp0n1o0ialb29egdj3qlnft9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs3sfjGpHvgwgOba0cqkGzteR8l2GZre0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024542344823-7par7v5dpp0n1o0ialb29egdj3qlnft9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_top">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/my_orders"
+            android:icon="@drawable/ic_assignment_returned_black_24dp"
+            android:title="My Orders" />
+
+        <item
+            android:id="@+id/my_money"
+            android:icon="@drawable/ic_baseline_attach_money_24"
+            android:title="My Money" />
+
+        <item
+            android:id="@+id/my_cart"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="My Cart" />
+
+        <item
+            android:id="@+id/my_wishlist"
+            android:icon="@drawable/ic_baseline_watch_later_24"
+            android:title="My Wishlist" />
+
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/ic_business_black_24dp"
+            android:title="About us" />
+
+        <item
+            android:id="@+id/contact"
+            android:icon="@drawable/ic_contact_phone_black_24dp"
+            android:title="Contact us" />
+    </group>
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/logout"
+            android:title="Logout" />
+
+
+        <item
+            android:id="@+id/login"
+
+            android:title="Login" />
+    </group>
+</menu>

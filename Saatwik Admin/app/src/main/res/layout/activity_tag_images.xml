@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TagImages"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/action_image"/>
+
+    <CheckBox
+        android:id="@+id/snacks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snacks@door"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masale"
+        android:id="@+id/Masale"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masalyache padartha"
+        android:id="@+id/padartha"/>
+
+    <Button
+        android:id="@+id/image_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/delete_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete image"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/change_tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change tab name"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

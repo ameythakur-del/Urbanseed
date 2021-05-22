@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.mondkars.saatwik.ui.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+        <action
+            android:id="@+id/action_nav_home_to_signout"
+            app:destination="@id/signout" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.mondkars.saatwik.ui.home.HomeSecondFragment"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:label="My Orders">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:showIn="navigation_view">
+
+            <item
+                android:id="@+id/my_orders"
+
+                android:title="My Orders" />
+
+        </menu>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_money"
+        android:label="My Money">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:showIn="navigation_view">
+
+            <item
+                android:id="@+id/my_money"
+
+                android:title="My Money" />
+
+        </menu>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:label="My Cart">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:showIn="navigation_view">
+
+            <item
+                android:id="@+id/my_cart"
+
+                android:title="My Cart" />
+
+        </menu>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_wishlist"
+        android:label="My Wishlist">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:showIn="navigation_view">
+
+            <item
+                android:id="@+id/my_wishlist"
+
+                android:title="My Wishlist" />
+
+        </menu>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:label="About us">
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+        <item
+            android:id="@+id/about_us"
+
+            android:title="About us" />
+
+    </menu>
+    </fragment>
+
+    <fragment
+        android:id="@+id/contact_us"
+        android:label="Contact us">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:showIn="navigation_view">
+
+            <item
+                android:id="@+id/contact"
+
+                android:title="Contact us" />
+
+        </menu>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signout"
+        android:label="Signout">
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+        <item
+            android:id="@+id/logout"
+
+            android:title="Logout" />
+        <item
+            android:id="@+id/login"
+
+            android:title="Login" />
+    </menu>
+        <action
+            android:id="@+id/action_signout_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    </navigation>

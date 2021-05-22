@@ -1,0 +1,570 @@
+[
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_cart_icon.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\cart_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_archive_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_archive_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_coupen.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\coupen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_gallery.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_contact_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_contact_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_logo.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\mipmap-hdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_attach_money_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_attach_money_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gmail.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\gmail.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_quantity.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\quantity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_contact_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_contact_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_archive_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_archive_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_row.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\item_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_shopping_cart_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_shopping_cart_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_assignment_returned_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_assignment_returned_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_card.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my_money.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_my_money.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_third_fragment.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\third_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_semi_round_button.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\semi_round_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_watch_later_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_watch_later_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_archive_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_archive_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_details.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_user_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_cart_icon.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\cart_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_shopping_cart_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_shopping_cart_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_menu.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_watch_later_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_watch_later_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_update.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_searchable.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\searchable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_down.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\anim\\slide_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_main2.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\nav_header_main2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_wish_row.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\wish_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_outline.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\round_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_share_24.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_share_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_change_address.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_change_address.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_second_fragment.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\second_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_watch_later_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_watch_later_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg1.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\bg1.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_assignment_returned_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_assignment_returned_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_share_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\font_metrophobic.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\font\\metrophobic.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_status_completed.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\shape_status_completed.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_o_t_p.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_o_t_p.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_add_button.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\add_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_watch_later_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_watch_later_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_business_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_business_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_menu_gallery.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_menu.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_status_current.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\shape_status_current.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_business_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_business_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_archive_black_24dp.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_archive_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_my_button.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\my_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_up.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\anim\\slide_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_my_custom_background.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\my_custom_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_contact_phone_black_24dp.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_contact_phone_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_about_us_fragment.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\about_us_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_confirm.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_confirm.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_attach_money_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_attach_money_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_assignment_returned_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_assignment_returned_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_share_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_cart_icon.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\cart_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_cart_row.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\cart_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_contact_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_contact_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_order.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\order.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_t.jpg.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\t.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_business_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_business_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_cart_icon.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\cart_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_attach_money_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_attach_money_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_archive_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_archive_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_shopping_cart_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_shopping_cart_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_whatsapp2.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\whatsapp2.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_menu.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_main2.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\app_bar_main2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_first_fragment.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\first_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_watch_later_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_watch_later_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_button.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\round_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dialog.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\fragment_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_slab.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\font\\roboto_slab.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_shopping_cart_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_shopping_cart_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_posts.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\posts.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_business_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_business_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_contact_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_contact_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_attach_money_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_attach_money_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_business_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_business_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_side_nav_bar.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_cart_icon.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\cart_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_track.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_track.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_maps.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\maps.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\ic.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_share_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_archive_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_archive_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_shopping_cart_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_shopping_cart_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forget_password.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_forget_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_insta.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\insta.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_watch_later_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_watch_later_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_coupon.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_coupon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my_cart.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_my_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_menu.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_attach_money_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_attach_money_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_assignment_returned_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_assignment_returned_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_cart_icon.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\cart_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_assignment_returned_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_assignment_returned_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_shopping_cart_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_shopping_cart_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_contact_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_contact_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_whatsapp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\whatsapp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_assignment_returned_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_assignment_returned_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_2.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_archive_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_archive_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\font_ramabhadra.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\font\\ramabhadra.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_contact_us_fragment.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\contact_us_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_menu_slideshow.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_p.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\p.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_business_black_24dp.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_business_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_attach_money_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_attach_money_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_share_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_numberpicker_horizontal.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\numberpicker_horizontal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_share_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_image_column.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\image_column.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fb.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\fb.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\menu_activity_main2_drawer.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\menu\\activity_main2_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_share_24.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main2.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\content_main2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_contact_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_contact_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_watch_later_24.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_watch_later_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_attach_money_24.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_attach_money_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_shopping_cart_black_24dp.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_shopping_cart_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_business_black_24dp.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_business_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_urbanseedbg2.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\urbanseedbg2.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_menu.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_menu.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_menu.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_homepage.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\drawable\\homepage.png"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_wishlist.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\fragment_wishlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_assignment_returned_black_24dp.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_assignment_returned_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main2.xml.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\src\\main\\res\\layout\\activity_main2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_cart_icon.png.flat",
+        "source": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\cart_icon.png"
+    }
+]

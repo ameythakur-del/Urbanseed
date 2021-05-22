@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/urbanseedbg2"
+    tools:context=".MyMoney">
+
+    <TextView
+        android:textSize="20dp"
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Current Balance"
+        android:textAllCaps="true"
+        android:textColor="#000000" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#00abe5"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:textSize="30dp"
+            android:id="@+id/rs"
+            android:text="\u20B9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"/>
+
+
+    <TextView
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:letterSpacing="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/congratulations"
+        android:textSize="75dp"
+        android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="#e7f5fe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="0dp"
+        app:cardCornerRadius="40dp">
+
+        <TextView
+            android:fontFamily="@font/roboto_slab"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#00abe5"
+            android:id="@+id/earn"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:textColor="#98AFC7"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You will receive this amount on the delivery of your next order."
+        android:id="@+id/availment" />
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Keep Earning, Keep Sharing !"
+        android:textColor="#000000"/>
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:text="Share the app"
+        android:textColor="#000000"
+        android:padding="16dp"
+        android:drawableLeft="@drawable/ic_menu_share"
+        android:background="@drawable/add_button"
+        android:layout_height="wrap_content"
+        android:id="@+id/share"/>
+
+</LinearLayout>

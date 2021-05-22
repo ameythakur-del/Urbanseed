@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Amey Thakur\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Amey Thakur\\.gradle\\wrapper\\caches\\transforms-2\\files-2.1\\3c91e8a730a024f8a625297be830969c\\jetified-SlideUp-Android-2.2.8\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "45",
+                        "endOffsets": "96"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Amey Thakur\\.gradle\\wrapper\\caches\\transforms-2\\files-2.1\\ab519ee8cf6af6d90b9f5238df620f73\\material-1.4.0-beta01\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,191",
+                        "endColumns": "135,140",
+                        "endOffsets": "186,327"
+                    },
+                    "to": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "101,237",
+                        "endColumns": "135,140",
+                        "endOffsets": "232,373"
+                    }
+                }
+            ]
+        }
+    ]
+}

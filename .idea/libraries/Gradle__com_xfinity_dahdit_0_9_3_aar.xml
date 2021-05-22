@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.xfinity:dahdit:0.9.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/caches/transforms-2/files-2.1/7aceed9e1d015455e87692979f3779f4/jetified-dahdit-0.9.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/caches/transforms-2/files-2.1/7aceed9e1d015455e87692979f3779f4/jetified-dahdit-0.9.3/res" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/caches/transforms-2/files-2.1/7aceed9e1d015455e87692979f3779f4/jetified-dahdit-0.9.3/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/caches/modules-2/files-2.1/com.xfinity/dahdit/0.9.3/b21845fc441bae7f651464f9072d4dea77a9a1c0/dahdit-0.9.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/caches/modules-2/files-2.1/com.xfinity/dahdit/0.9.3/cd24f6f81733533d6eebdaa7761d7a4b32f53d15/dahdit-0.9.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,166 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#b83d0f</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#fa638c</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="mainActivity" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="colorAccent">#ffffff</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">#FFFFFF</item>
+    </style>
+
+    <style name="ColorTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">My Cart</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="UpdateActivity" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Update</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="ConfirmActivity" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Confirm Your Order</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="CouponActivity" parent="Theme.MaterialComponents.DayNight.Bridge">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="android:editTextColor">#000000</item>
+        <item name="title">Apply Coupons</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="ChangeAddress" parent="Theme.MaterialComponents.DayNight.Bridge">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Change Address</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="Activity2" parent="Theme.MaterialComponents.DayNight.Bridge">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Login</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="ActivityUserDetails" parent="Theme.MaterialComponents.DayNight.Bridge">
+        <item name="colorPrimary">#b83d0f</item>
+        <item name="title">Enter your details</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="OTPActivity" parent="Theme.MaterialComponents.DayNight.Bridge">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Mobile Verification</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="Activity3" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Register</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+    <style name="ForgetPassword" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Password Recovery</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="ColorTheme2" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">My Wishlist</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="MyMoney" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">My Money</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="ColorTheme5" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">My Orders</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="ColorTheme3" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">About us</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="ColorTheme4" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f</item>
+        <item name="title">Contact us</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+
+    <style name="TrackActivity" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#b83d0f </item>
+        <item name="title">Track your Order</item>
+        <item name="android:statusBarColor">#A52A2A</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="colorAccent">#fa638c</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+
+
+</resources>
