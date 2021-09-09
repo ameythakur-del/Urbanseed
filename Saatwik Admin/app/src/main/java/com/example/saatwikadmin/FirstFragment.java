@@ -100,7 +100,7 @@ public class FirstFragment extends Fragment {
 
                 {
 
-                    reference.addValueEventListener(new ValueEventListener() {
+                    reference.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             itemList = new ArrayList<Item>();
@@ -108,8 +108,8 @@ public class FirstFragment extends Fragment {
                                 {
                                     Item ameya = dataSnapshot1.getValue(Item.class);
 
-                                    if(dataSnapshot1.child("category").exists()) {
-                                        if (ameya.getCategory().equals("Snacks")) {
+                                    {
+                                       {
                                             itemList.add(ameya);
                                         }
                                     }

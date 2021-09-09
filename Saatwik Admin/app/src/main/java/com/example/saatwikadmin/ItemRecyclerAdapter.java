@@ -1,7 +1,10 @@
 package com.example.saatwikadmin;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -116,7 +119,7 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
         StorageReference storageReference = FirebaseStorage.getInstance().getReference("Images");
 
         public long countPosts = 0;
-        public Button buy, not, available, visible, not_visible;
+        public Button buy, not, available, visible, not_visible, edit;
         public FirebaseAuth firebaseAuth;
         public FirebaseAuth.AuthStateListener authStateListener;
 
@@ -131,6 +134,7 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
             ietem = itemView.findViewById(R.id.item_name_list);
             price = itemView.findViewById(R.id.price);
 
+            edit = itemView.findViewById(R.id.edit);
             image = itemView.findViewById(R.id.item_image_list);
             image.setOnClickListener(this);
             final FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -146,23 +150,38 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
 
             visible.setOnClickListener(this);
             not_visible.setOnClickListener(this);
+            edit.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-
+            if(v == edit){
+                int position = getAdapterPosition();
+                Item item = itemList.get(position);
+               Intent intent = new Intent(context, UpdateItems.class);
+               intent.putExtra("Item", item.getItem());
+               context.startActivity(intent);
+                ((Activity)context).finish();
+            }
+            
             if (v == buy) {
                 int position = getAdapterPosition();
                 Item item = itemList.get(position);
                 String name = item.getItem();
-                storageReference.child(name).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(context, "Item deleted with the image", Toast.LENGTH_LONG).show();
-                    }
-                });
+                if(item.getImageUrl() != null) {
+                    storageReference.child(name).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(context, "Item deleted with the image", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+                else{
+                    Toast.makeText(context, "Item deleted without image", Toast.LENGTH_LONG).show();
+                }
                 databaseReference = FirebaseDatabase.getInstance().getReference().child("items").child(name);
                 databaseReference.removeValue();
+                ((Activity) context).recreate();
             }
             if (v == not) {
                 int position = getAdapterPosition();

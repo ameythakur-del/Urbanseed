@@ -4,79 +4,42 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SearchView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.saatwikadmin.Model.Gift;
-import com.example.saatwikadmin.Model.MyOrder;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class CouponForAll extends AppCompatActivity {
 
-    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Marketers");
-    public List<Gift> gifts;
-    RecyclerView recyclerView;
-    GiftRecyclerAdapter giftRecyclerAdapter;
-    SearchView searchView;
+    EditText coupon, discount, condition;
+    Button apply;
+    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Coupons");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coupon_for_all);
 
-        searchView = findViewById(R.id.search_bar);
-        gifts = new ArrayList<Gift>();
+        coupon = findViewById(R.id.coupon);
+        discount = findViewById(R.id.coupon_discount);
+        apply = findViewById(R.id.apply);
+        condition = findViewById(R.id.coupon_condition);
 
-        recyclerView = (RecyclerView) findViewById(R.id.view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        reference.addValueEventListener(new ValueEventListener() {
+        apply.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                gifts = new ArrayList<Gift>();
-                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    Gift gift = new Gift();
-                    gift.setMobile(dataSnapshot1.getKey());
-                    if (dataSnapshot1.child("money").exists()) {
-                        gift.setPrice(Integer.parseInt(dataSnapshot1.child("money").getValue().toString()));
-                    }
-                    gifts.add(gift);
-                }
-                giftRecyclerAdapter = new GiftRecyclerAdapter(CouponForAll.this, gifts);
-                recyclerView.setAdapter(giftRecyclerAdapter);
-                giftRecyclerAdapter.notifyDataSetChanged();
-                searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                    @Override
-                    public boolean onQueryTextSubmit(String query) {
-                        return false;
-                    }
-                    @Override
-                    public boolean onQueryTextChange(String newText) {
-                        giftRecyclerAdapter.getFilter().filter(newText);
-                        recyclerView.setAdapter(giftRecyclerAdapter);
-                        giftRecyclerAdapter.notifyDataSetChanged();
-                        return true;
-                    }
-                });
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
+            public void onClick(View v) {
+                String Coupon = coupon.getText().toString().trim();
+                String Discount = discount.getText().toString().trim();
+                String Condition = condition.getText().toString().trim();
+                String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
+                reference.child(Coupon).child("code").setValue(Coupon);
+                reference.child(Coupon).child("percent").setValue(Discount);
+                reference.child(Coupon).child("condition").setValue(Condition);
+                Toast.makeText(CouponForAll.this, "Done", Toast.LENGTH_LONG).show();
             }
         });
     }

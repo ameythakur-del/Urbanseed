@@ -38,7 +38,7 @@ import java.util.List;
 public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapter.ViewHolder> {
     private Context context;
     private List<MyOrder> myCart;
-    public Integer cost=0;
+    public float cost=0;
     String charge, min;
     public Integer ch=0;
     int Min = 0;
@@ -47,10 +47,15 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
     float d = 0;
     public String r="0";
     int off = 0;
+    int z=0, t=0, x=0;
+    List<OrderForAdmin> orderForAdminList;
     public CartRecyclerAdapter(Context context, List<MyOrder> myCart) {
         this.context = context;
         this.myCart = myCart;
     }
+    int delivery;
+    String marketer = null;
+
 
     @NonNull
     @Override
@@ -66,18 +71,18 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
         final DatabaseReference dileveryReference, minReference, discountReference;
         dileveryReference = FirebaseDatabase.getInstance().getReference().child("charge").child("delivery");
         String h="amey";
-        if(cartItem.getMobile() != null){
-            h = cartItem.getMobile();
+        if(cartItem.getUserId() != null){
+            h = cartItem.getUserId();
         }
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users").child(h);
         minReference = FirebaseDatabase.getInstance().getReference().child("charge").child("Min");
         final DatabaseReference limit = FirebaseDatabase.getInstance().getReference().child("Availed").child(h);
         final DatabaseReference limitnot = FirebaseDatabase.getInstance().getReference().child("limit");
-        final DatabaseReference adminOrder = FirebaseDatabase.getInstance().getReference().child("Order for admin").child(h);
 
         viewHolder.name.setText(cartItem.getName());
         viewHolder.alternate.setText(cartItem.getPincode());
         viewHolder.mobile.setText(cartItem.getMobile());
+        viewHolder.time.setText(cartItem.getDate() + " " + cartItem.getTime());
 
         final Pricing pricing = new Pricing();
 
@@ -142,12 +147,25 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                                                         pricing.setK(null);
                                                     }
 
-                                                            adminOrder.addValueEventListener(new ValueEventListener() {
+                                                    final DatabaseReference adminOrder = FirebaseDatabase.getInstance().getReference().child("Order for admin").child(cartItem.getUserId());
 
+                                                    adminOrder.addValueEventListener(new ValueEventListener() {
+
+                                                        @Override
+
+                                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                            DatabaseReference giftReference = FirebaseDatabase.getInstance().getReference().child("Marketers").child(cartItem.getUserId());
+                                                            giftReference.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                 @Override
+                                                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                                    if (snapshot.exists()) {
+//
+                                                                        z = Integer.parseInt(snapshot.child("money").getValue().toString());
 
-                                                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                                                    final List<OrderForAdmin> orderForAdminList;
+                                                                    } else {
+                                                                        z = 0;
+                                                                    }
+
                                                                     orderForAdminList = new ArrayList<>();
                                                                     cost = 0;
                                                                     off = 0;
@@ -155,43 +173,53 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                                                                         {
                                                                             OrderForAdmin orderForAdmin = dataSnapshot1.getValue(OrderForAdmin.class);
                                                                             orderForAdminList.add(orderForAdmin);
-                                                                            int temp = Integer.parseInt(orderForAdmin.getPrice());
+                                                                            float temp = Float.parseFloat(orderForAdmin.getPrice());
                                                                             int temp2 = Integer.parseInt(orderForAdmin.getNumber());
-                                                                            off = off + Integer.parseInt(orderForAdmin.getDiscount());
-                                                                            cost = cost + temp*temp2;
+                                                                            if(dataSnapshot1.child("discount").exists()) {
+                                                                                off = off + Integer.parseInt(orderForAdmin.getDiscount());
+                                                                            }
+                                                                            cost = cost + temp * temp2;
+                                                                            delivery = Integer.parseInt(orderForAdmin.getCharge());
                                                                         }
                                                                     }
+                                                                    viewHolder.numdelivery.setText("\u20B9" + delivery);
                                                                     String c = String.valueOf(cost);
-                                                                    viewHolder.numprice.setText("\u20B9" +c);
+                                                                    viewHolder.numprice.setText("\u20B9" + c);
                                                                     f = Math.round(off);
+                                                                    cartItem.setF(f);
                                                                     String g = String.valueOf(f);
                                                                     viewHolder.numdiscount.setText("\u20B9" + g);
 
-                                                                    Min = Integer.parseInt(pricing.getMin());
-
-                                                                    if(cost >= Min){
-                                                                        viewHolder.numdelivery.setText("\u20B9" + "0");
-                                                                        pricing.setCharge("0");
-                                                                        ch = 0;
+                                                                    int x = z;
+                                                                    cartItem.setTotal((int)(cost + ch - f));
+                                                                    cartItem.setX(x);
+                                                                    if(z > cost + delivery - f){
+                                                                        z = (int) (cost + delivery - f);
                                                                     }
-
-                                                                    else {
-                                                                        viewHolder.numdelivery.setText(pricing.getCharge());
-                                                                        ch = Integer.valueOf(pricing.getCharge());
-                                                                    }
+                                                                    cartItem.setZ(z);
                                                                     d = (Integer.parseInt(pricing.getDiscount()) * cost / 100);
-                                                                    int t = cost + ch - f;
-                                                                    String tot = String.valueOf(t);
+                                                                    int l = (int) (cost + delivery - f - z);
+
+                                                                    String zoya = String.valueOf(z);
+                                                                    viewHolder.earning.setText("\u20B9" + zoya);
+                                                                    String tot = String.valueOf(l);
                                                                     viewHolder.total.setText("\u20B9" + tot);
                                                                     viewHolder.orderRecyclerAdapter = new OrderRecyclerAdapter(context, orderForAdminList);
                                                                     viewHolder.recyclerView.setAdapter(viewHolder.orderRecyclerAdapter);
                                                                 }
+
                                                                 @Override
                                                                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
                                                                 }
-
                                                             });
+                                                        }
+                                                        @Override
+                                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                                        }
+
+                                                    });
                                                 }
                                             }
                                         }
@@ -252,13 +280,14 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView
-                mobile, alternate, name, address, pending, numprice, numdelivery, numdiscount, total;
+                mobile, alternate, name, address, pending, numprice, numdelivery, numdiscount, total, earning, time;
         public OrderRecyclerAdapter orderRecyclerAdapter;
         public RecyclerView recyclerView;
         DatabaseReference reference, totalReference;
 
-        Button delivered, aprove, decline, out;
-        DatabaseReference orderReference, databaseReference;
+        int a=0;
+        Button delivered, aprove, decline, out, undelivered;
+        DatabaseReference orderReference, databaseReference, historyReference;
 
         public FirebaseAuth firebaseAuth;
 
@@ -267,6 +296,8 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
         public ViewHolder(@NonNull View itemView, Context ctx) {
             super(itemView);
             context = ctx;
+            time = itemView.findViewById(R.id.time);
+            earning = itemView.findViewById(R.id.earning);
             numprice = itemView.findViewById(R.id.num_price);
             numdelivery = itemView.findViewById(R.id.del_charge);
             numdiscount = itemView.findViewById(R.id.discount);
@@ -293,6 +324,9 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
             totalReference = FirebaseDatabase.getInstance().getReference().child("Total Money");
             out = itemView.findViewById(R.id.out);
             out.setOnClickListener(this);
+            undelivered = itemView.findViewById(R.id.undilevered);
+            undelivered.setOnClickListener(this);
+            historyReference = FirebaseDatabase.getInstance().getReference().child("Order History");
         }
 
         @Override
@@ -300,61 +334,122 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
             if(v == delivered){
                 int position = getAdapterPosition();
                 final MyOrder cartItem = myCart.get(position);
-                DatabaseReference limit = FirebaseDatabase.getInstance().getReference().child("Availed").child(cartItem.getMobile());
-                final DatabaseReference limitnot = FirebaseDatabase.getInstance().getReference().child("limit");
                 final String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
-                DatabaseReference availed = FirebaseDatabase.getInstance().getReference().child("Availed").child(cartItem.getMobile());
+
+                DatabaseReference admin = FirebaseDatabase.getInstance().getReference().child("Order for admin").child(cartItem.getUserId());
+
+                admin.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                    @Override
+
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                                    {
+                                        OrderForAdmin orderForAdmin = dataSnapshot1.getValue(OrderForAdmin.class);
+                                        historyReference.child(cartItem.getMobile()).child(currentDateTimeString).child(orderForAdmin.getItem()).setValue(orderForAdmin);
+                                    }
+                                }
+
+                            }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+
+                });
+
+                DatabaseReference donor = FirebaseDatabase.getInstance().getReference().child("Donors");
+
+                donor.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.child(cartItem.getMobile()).exists()) {
+                            return;
+                        } else {
+                            donor.child(cartItem.getMobile()).setValue(cartItem.getMobile());
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+                DatabaseReference marketers = FirebaseDatabase.getInstance().getReference().child("Marketers");
+
+                orderReference.child(cartItem.getMobile()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.child("ReferralNumber").exists()){
+                            marketer = String.valueOf(dataSnapshot.child("ReferralNumber").getValue());
+
+                            if (marketer != null) {
+                                {
+                                    marketers.child(marketer).child("money").addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            if (snapshot.exists()) {
+                                                int temp = Integer.parseInt(snapshot.getValue().toString());
+                                                int j = cartItem.getF();
+                                                j += temp;
+                                                Toast.makeText(context, String.valueOf(j), Toast.LENGTH_SHORT).show();
+                                                snapshot.getRef().setValue(String.valueOf(j));
+                                            } else {
+                                                snapshot.getRef().setValue(String.valueOf(cartItem.getF()));
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                        }
+                                    });
+                                }
+                            }
+
+                            DatabaseReference databaseReference1 = FirebaseDatabase.getInstance().getReference().child("Takers");
+                            databaseReference1.child(cartItem.getMobile()).setValue(cartItem.getMobile());
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+
 
                 totalReference.child(cartItem.getMobile()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists()){
-                            Toast.makeText(context, dataSnapshot.getValue().toString(), Toast.LENGTH_LONG).show();
-                            if(cartItem.getPrice() != null){
-//                                a += Integer.parseInt(cartItem.getPrice());
-//                                totalReference.child(cartItem.getMobile()).setValue(a);
-                                reference.child(cartItem.getMobile()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot napshot) {
-                                        if (napshot.exists()) {
-                                            int a = Integer.parseInt(napshot.child("money").getValue().toString());
-                                            a += Integer.parseInt(napshot.getValue().toString());
-                                            Toast.makeText(context, "1", Toast.LENGTH_LONG).show();
-                                            totalReference.child(cartItem.getMobile()).setValue(a);
-                                            reference.child(cartItem.getMobile()).removeValue();
-                                        }
-                                        else{
-                                            Toast.makeText(context, "2", Toast.LENGTH_LONG).show();
-                                        }
-                                    }
+                        if (dataSnapshot.exists()) {
+                            a = Integer.parseInt(dataSnapshot.getValue().toString());
+                            a += cartItem.getZ();
 
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                    }
-                                });
+                            totalReference.child(cartItem.getMobile()).setValue(a);
+                            if(cartItem.getX() - cartItem.getTotal() > 0) {
+                                reference.child(cartItem.getMobile()).child("money").setValue(cartItem.getX() - cartItem.getTotal());
+                            }
+                            else{
+                                reference.child(cartItem.getMobile()).child("money").setValue(0);
                             }
                         }
                         else{
-                            reference.child(cartItem.getMobile()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot napshot) {
-                                    if (napshot.exists()) {
-                                        int a = Integer.parseInt(napshot.child("money").getValue().toString());
-                                        Toast.makeText(context, "3", Toast.LENGTH_LONG).show();
+                                        int a = cartItem.getZ();
+
                                         totalReference.child(cartItem.getMobile()).setValue(a);
-                                        reference.child(cartItem.getMobile()).removeValue();
-                                    }
-                                    else{
-                                        Toast.makeText(context, "4", Toast.LENGTH_LONG).show();
-                                    }
-                                }
+                            if(cartItem.getX() - cartItem.getTotal() > 0) {
+                                reference.child(cartItem.getMobile()).child("money").setValue(cartItem.getX() - cartItem.getTotal());
+                            }
+                            else{
+                                reference.child(cartItem.getMobile()).child("money").setValue(0);
+                            }
 
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                }
-                            });
+
                         }
                     }
 
@@ -364,20 +459,6 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                     }
                 });
 
-                availed.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()){
-                            String k = dataSnapshot.child("code").getValue().toString();
-                            limitnot.child(cartItem.getMobile() + currentDateTimeString).setValue(cartItem.getMobile() + k);
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
                 final String a = cartItem.getMobile();
                 Query query = FirebaseDatabase.getInstance().getReference().child("Order").orderByChild("userPhone").equalTo(a);
 //                Query query = orderReference.orderByChild("userId").equalTo(a);
@@ -387,13 +468,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (final DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                            {
-                                   {
-                                       String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
-                                       data.child(dataSnapshot1.getKey() + currentDateTimeString).setValue(dataSnapshot1.getValue());
-                                       dataSnapshot1.getRef().removeValue();
-                                    }
-                                }
+                            dataSnapshot1.getRef().removeValue();
                         }
                     }
 
@@ -461,8 +536,94 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
                     }
                 });
-                ((Activity) context).recreate();
             }
+
+            if(v == undelivered){
+                int position = getAdapterPosition();
+                final MyOrder cartItem = myCart.get(position);
+                final String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
+
+
+
+                final String a = cartItem.getMobile();
+                Query query = FirebaseDatabase.getInstance().getReference().child("Order").orderByChild("userPhone").equalTo(a);
+//                Query query = orderReference.orderByChild("userId").equalTo(a);
+                final DatabaseReference data = FirebaseDatabase.getInstance().getReference().child("Order history");
+                FirebaseDatabase.getInstance().getReference().child("Special users").child(cartItem.getMobile()).removeValue();
+                query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (final DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                            dataSnapshot1.getRef().removeValue();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+                Query query2 = databaseReference.orderByChild("userPhone").equalTo(a);
+//                Query query = orderReference.orderByChild("userId").equalTo(a);
+                query2.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot3) {
+                        for (final DataSnapshot dataSnapshot4 : dataSnapshot3.getChildren()) {
+                            {
+                                {
+                                    dataSnapshot4.getRef().removeValue();
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Toast.makeText(context, "Couldnt remove", Toast.LENGTH_LONG).show();
+                    }
+                });
+                DatabaseReference adminOrder = FirebaseDatabase.getInstance().getReference().child("Order for admin").child(cartItem.getMobile());
+                adminOrder.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (final DataSnapshot dataSnapshot4 : dataSnapshot.getChildren()) {
+                            {
+                                {
+                                    dataSnapshot4.getRef().removeValue();
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+                DatabaseReference user = FirebaseDatabase.getInstance().getReference().child("Users").child(cartItem.getMobile());
+                user.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (final DataSnapshot dataSnapshot4 : dataSnapshot.getChildren()) {
+                            {
+                                {
+                                    dataSnapshot4.getRef().removeValue();
+                                }
+                            }
+                        }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
             if (v == aprove){
                 int position = getAdapterPosition();
                 final MyOrder cartItem = myCart.get(position);
@@ -511,68 +672,68 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                 final MyOrder cartItem = myCart.get(position);
                 final DatabaseReference availed = FirebaseDatabase.getInstance().getReference().child("Availed").child(cartItem.getMobile());
 
-                    final String a = cartItem.getMobile();
-                        Query query = orderReference.orderByChild("Mobile").equalTo(a);
+                final String a = cartItem.getMobile();
+                Query query = orderReference.orderByChild("Mobile").equalTo(a);
 
-                        query.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                for (final DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                    {
-                                        {
-                                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                                            builder.setTitle("Sorry ! We cant place your order since");
+                query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (final DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                            {
+                                {
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                                    builder.setTitle("Sorry ! We cant place your order since");
 
 // Set up the input
-                                            final EditText input = new EditText(context);
+                                    final EditText input = new EditText(context);
 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-                                            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_CLASS_TEXT);
-                                            builder.setView(input);
+                                    input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_CLASS_TEXT);
+                                    builder.setView(input);
 
 // Set up the buttons
-                                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            String m_Text = "";
+                                            m_Text = input.getText().toString();
+                                            cartItem.setStatus("Sorry ! We cant place your order since ");
+                                            HashMap map = new HashMap();
+                                            map.put("status", "Sorry ! We cant place your order since ");
+                                            map.put("reason", m_Text);
+                                            dataSnapshot1.getRef().updateChildren(map);
+                                            availed.addListenerForSingleValueEvent(new ValueEventListener() {
                                                 @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    String m_Text = "";
-                                                    m_Text = input.getText().toString();
-                                                    cartItem.setStatus("Sorry ! We cant place your order since ");
-                                                    HashMap map = new HashMap();
-                                                    map.put("status", "Sorry ! We cant place your order since ");
-                                                    map.put("reason", m_Text);
-                                                    dataSnapshot1.getRef().updateChildren(map);
-                                                    availed.addListenerForSingleValueEvent(new ValueEventListener() {
-                                                        @Override
-                                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                                            if (dataSnapshot.exists()){
-                                                                dataSnapshot.getRef().removeValue();
-                                                            }
-                                                        }
+                                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                    if (dataSnapshot.exists()){
+                                                        dataSnapshot.getRef().removeValue();
+                                                    }
+                                                }
 
-                                                        @Override
-                                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                                        }
-                                                    });
                                                 }
                                             });
-                                            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    dialog.cancel();
-                                                }
-                                            });
-
-                                            builder.show();
                                         }
-                                    }
+                                    });
+                                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.cancel();
+                                        }
+                                    });
+
+                                    builder.show();
                                 }
                             }
+                        }
+                    }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                            }
-                        });
+                    }
+                });
             }
 
             if (v == out){
@@ -617,9 +778,9 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
                     }
                 });
-                    }
-                }
             }
+        }
+    }
 }
 
 

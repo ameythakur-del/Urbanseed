@@ -7,6 +7,7 @@ public class Item {
     private String price;
     private String quantity;
     private String priced;
+    private String mrp;
     private String delivery;
     private String category;
     private String original;
@@ -16,7 +17,7 @@ public class Item {
     public Item() {
     }
 
-    public Item(String item, String taste, String imageUrl, String price, String quantity, String priced, String delivery, String category, String original, String subcategory, Boolean visibility) {
+    public Item(String item, String taste, String imageUrl, String price, String quantity, String priced, String delivery, String category, String original, String subcategory, Boolean visibility, String mrp) {
         this.item = item;
         this.taste = taste;
         this.imageUrl = imageUrl;
@@ -28,6 +29,7 @@ public class Item {
         this.original = original;
         this.subcategory = subcategory;
         this.visibility = visibility;
+        this.mrp = mrp;
     }
 
     public Item(String toString, String toString1, String toString2, String toString3, String toString4, String toString5, String toString6, String toString7) {
@@ -131,5 +133,13 @@ public class Item {
 
     public void setVisibility(Boolean visibility) {
         this.visibility = visibility;
+    }
+
+    public String getMrp() {
+        return mrp;
+    }
+
+    public void setMrp(String mrp) {
+        this.mrp = mrp;
     }
 }

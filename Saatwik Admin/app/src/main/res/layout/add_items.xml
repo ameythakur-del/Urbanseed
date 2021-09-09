@@ -46,14 +46,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Selling price"
-        android:inputType="number"/>
+        android:inputType="numberDecimal"
+        android:digits="0123456789."/>
 
                 <EditText
                     android:id="@+id/original_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Original price"
-                    android:inputType="number"/>
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."/>
 
             </LinearLayout>
             <LinearLayout
@@ -63,20 +65,29 @@
                 android:orientation="horizontal">
 
             <EditText
-                android:layout_weight="4"
-                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/quantity1"
-                android:layout_marginRight="10dp"
                 android:hint="Price description"/>
 
                 <EditText
                     android:layout_weight="1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/price1"
-                    android:inputType="number"
-                    android:hint="Price description"/>
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="Price"/>
+
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price5"
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="MRP"/>
 
             </LinearLayout>
 
@@ -88,11 +99,10 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:layout_weight="4"
-                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/quantity2"
-                    android:layout_marginRight="10dp"
                     android:hint="Price description"/>
 
                 <EditText
@@ -100,9 +110,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/price2"
-                    android:inputType="number"
-                    android:hint="Price description"/>
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="Price"/>
 
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price6"
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="MRP"/>
             </LinearLayout>
 
             <LinearLayout
@@ -112,11 +131,10 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:layout_weight="4"
-                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/quantity3"
-                    android:layout_marginRight="10dp"
                     android:hint="Price description"/>
 
                 <EditText
@@ -124,9 +142,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/price3"
-                    android:inputType="number"
-                    android:hint="Price description"/>
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="Price"/>
 
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price7"
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="MRP"/>
             </LinearLayout>
 
             <LinearLayout
@@ -134,13 +161,11 @@
                 android:layout_height="wrap_content"
                 android:weightSum="5"
                 android:orientation="horizontal">
-
                 <EditText
-                    android:layout_weight="4"
-                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/quantity4"
-                    android:layout_marginRight="10dp"
                     android:hint="Price description"/>
 
                 <EditText
@@ -148,8 +173,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/price4"
-                    android:inputType="number"
-                    android:hint="Price description"/>
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="Price"/>
+
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price8"
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="MRP"/>
 
             </LinearLayout>
 
@@ -171,19 +206,104 @@
         android:id="@+id/checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="meal@door" />
+        android:text="Grain and Pulses" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Spices" />
+        android:text="Biscuits" />
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mondkar's special" />
+        android:text="Kitchen Essentials" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Homemade Food" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vegetables and Fruits" />
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stationary" />
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soaps" />
+            <CheckBox
+                android:id="@+id/checkBox16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detergents" />
+            <CheckBox
+                android:id="@+id/checkBox8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fish" />
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chicken and Eggs" />
+
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dairy Products" />
+
+            <CheckBox
+                android:id="@+id/checkBox11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spices" />
+
+            <CheckBox
+                android:id="@+id/checkBox12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flours" />
+
+            <CheckBox
+                android:id="@+id/checkBox13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gift Items" />
+
+            <CheckBox
+                android:id="@+id/checkBox14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal Care" />
+
+            <CheckBox
+                android:id="@+id/checkBox15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Juices" />
+
+            <CheckBox
+                android:id="@+id/checkBox17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edible Oil" />
+
+            <CheckBox
+                android:id="@+id/checkBox18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beverages" />
 
      <Switch
          android:layout_width="wrap_content"

@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.saatwikadmin.Model.Item;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.chip.Chip;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -49,11 +50,11 @@ public class AddItems extends Fragment {
     StorageReference storageReference;
     String category, per, subcategory;
 
-    EditText name, taste, price, delivery, quantity1, price1, quantity2, price2, quantity3, price3, quantity4, price4, discount;
+    EditText name, taste, price, delivery, quantity1, price1, quantity2, price2, quantity3, price3, quantity4, price4, discount, price5, price6, price7, price8;
     Boolean visibility;
     FirebaseDatabase database;
     Member member;
-    CheckBox snacks, masale, other;
+    CheckBox snacks, masale, other, homemade, vegetables, stationary, soaps, fish, chicken, dairy, spices, flours, gift, personal, juices, detergents, edible, beverages;
 
     private ImageButton imageButton;
 
@@ -93,9 +94,28 @@ public class AddItems extends Fragment {
         price3 = view.findViewById(R.id.price3);
         quantity4 = view.findViewById(R.id.quantity4);
         price4 = view.findViewById(R.id.price4);
+        price5 = view.findViewById(R.id.price5);
+        price6 = view.findViewById(R.id.price6);
+        price7 = view.findViewById(R.id.price7);
+        price8 = view.findViewById(R.id.price8);
         snacks = view.findViewById(R.id.checkBox);
         masale = view.findViewById(R.id.checkBox2);
         other = view.findViewById(R.id.checkBox3);
+        homemade = view.findViewById(R.id.checkBox4);
+        vegetables = view.findViewById(R.id.checkBox5);
+        stationary = view.findViewById(R.id.checkBox6);
+        soaps = view.findViewById(R.id.checkBox7);
+        fish = view.findViewById(R.id.checkBox8);
+        chicken = view.findViewById(R.id.checkBox9);
+        dairy = view.findViewById(R.id.checkBox10);
+        spices = view.findViewById(R.id.checkBox11);
+        flours = view.findViewById(R.id.checkBox12);
+        gift = view.findViewById(R.id.checkBox13);
+        personal = view.findViewById(R.id.checkBox14);
+        juices = view.findViewById(R.id.checkBox15);
+        detergents = view.findViewById(R.id.checkBox16);
+        edible = view.findViewById(R.id.checkBox17);
+        beverages = view.findViewById(R.id.checkBox18);
         progressDialog = new ProgressDialog(getActivity());
         name = view.findViewById(R.id.edit_name);
         imageButton = view.findViewById(R.id.upload_image);
@@ -148,9 +168,7 @@ public class AddItems extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == Image_Request_Code && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
             imageUri = data.getData();
@@ -179,13 +197,58 @@ public class AddItems extends Fragment {
 
         category = "Snacks";
         if(snacks.isChecked()){
-            category = "Snacks";
+            category = "Grain and Pulses";
         }
         else if(masale.isChecked()){
-            category = "Masale";
+            category = "Biscuits";
         }
         else if (other.isChecked()){
-            category = "Masalyache Padartha";
+            category = "Kitchen Essentials";
+        }
+        else if(homemade.isChecked()){
+            category = "Homemade Food";
+        }
+        else if (vegetables.isChecked()){
+            category = "Vegetables and Fruits";
+        }
+        else if(stationary.isChecked()){
+            category = "Staionary";
+        }
+        else if (soaps.isChecked()){
+            category = "Soaps";
+        }
+        else if(fish.isChecked()){
+            category = "Fish";
+        }
+        else if (chicken.isChecked()){
+            category = "Chicken and Eggs";
+        }
+        else if (dairy.isChecked()){
+            category = "Dairy Products";
+        }
+        else if (spices.isChecked()){
+            category = "Spices";
+        }
+        else if (flours.isChecked()){
+            category = "Flours";
+        }
+        else if (gift.isChecked()){
+            category = "Gift Items";
+        }
+        else if (personal.isChecked()){
+            category = "Personal Care";
+        }
+        else if (juices.isChecked()){
+            category = "Juices";
+        }
+        else if (detergents.isChecked()){
+            category = "Detergents";
+        }
+        else if (edible.isChecked()){
+            category = "Edible Oil";
+        }
+        else if (beverages.isChecked()){
+            category = "Beverages";
         }
 
         subcategory = "";
@@ -204,6 +267,10 @@ public class AddItems extends Fragment {
         final String Price3 = price3.getText().toString().trim();
         final String Quantity4 = quantity4.getText().toString().trim();
         final String Price4 = price4.getText().toString().trim();
+        final String Price5 = price5.getText().toString().trim();
+        final String Price6 = price6.getText().toString().trim();
+        final String Price7 = price7.getText().toString().trim();
+        final String Price8 = price8.getText().toString().trim();
         final String Original = discount.getText().toString().trim();
         if(swit.isChecked()){
             visibility = true;
@@ -216,6 +283,7 @@ public class AddItems extends Fragment {
         if (!TextUtils.isEmpty(Name) &&
                 !TextUtils.isEmpty(Taste)
                 && !TextUtils.isEmpty(Price)
+                && !TextUtils.isEmpty(Original)
                 && !TextUtils.isEmpty(Delivery)
                 && !TextUtils.isEmpty(Quantity1)) {
 
@@ -265,24 +333,28 @@ public class AddItems extends Fragment {
                                             Item item1 = new Item(Quantity1.toString(), Price1.toString());
                                             item1.setQuantity(Quantity1);
                                             item1.setPriced(Price1);
+                                            item1.setMrp(Price5);
                                             databaseReference1.child("Quantity").child("Quantity1").setValue(item1);
                                         }
                                         if(!Quantity2.isEmpty()) {
                                             Item item1 = new Item(Quantity2.toString(), Price2.toString());
                                             item1.setQuantity(Quantity2);
                                             item1.setPriced(Price2);
+                                            item1.setMrp(Price6);
                                             databaseReference1.child("Quantity").child("Quantity2").setValue(item1);
                                         }
                                         if(!Quantity3.isEmpty()) {
                                             Item item1 = new Item(Quantity3.toString(), Price3.toString());
                                             item1.setQuantity(Quantity3);
                                             item1.setPriced(Price3);
+                                            item1.setMrp(Price7);
                                             databaseReference1.child("Quantity").child("Quantity3").setValue(item1);
                                         }
                                         if(!Quantity4.isEmpty()) {
                                             Item item1 = new Item(Quantity4.toString(), Price4.toString());
                                             item1.setQuantity(Quantity4);
                                             item1.setPriced(Price4);
+                                            item1.setMrp(Price8);
                                             databaseReference1.child("Quantity").child("Quantity4").setValue(item1);
                                         }
                                         progressDialog.dismiss();
@@ -316,24 +388,28 @@ public class AddItems extends Fragment {
                     Item item1 = new Item(Quantity1.toString(), Price1.toString());
                     item1.setQuantity(Quantity1);
                     item1.setPriced(Price1);
+                    item1.setMrp(Price5);
                     databaseReference1.child("Quantity").child("Quantity1").setValue(item1);
                 }
                 if(!Quantity2.isEmpty()) {
                     Item item1 = new Item(Quantity2.toString(), Price2.toString());
                     item1.setQuantity(Quantity2);
                     item1.setPriced(Price2);
+                    item1.setMrp(Price6);
                     databaseReference1.child("Quantity").child("Quantity2").setValue(item1);
                 }
                 if(!Quantity3.isEmpty()) {
                     Item item1 = new Item(Quantity3.toString(), Price3.toString());
                     item1.setQuantity(Quantity3);
                     item1.setPriced(Price3);
+                    item1.setMrp(Price7);
                     databaseReference1.child("Quantity").child("Quantity3").setValue(item1);
                 }
                 if(!Quantity4.isEmpty()) {
                     Item item1 = new Item(Quantity4.toString(), Price4.toString());
                     item1.setQuantity(Quantity4);
                     item1.setPriced(Price4);
+                    item1.setMrp(Price8);
                     databaseReference1.child("Quantity").child("Quantity4").setValue(item1);
                 }
                 progressDialog.dismiss();
@@ -343,7 +419,7 @@ public class AddItems extends Fragment {
 
         } else {
             progressDialog.dismiss();
-            Toast.makeText(getActivity(), "Please Select Image or Add Image Name", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Please enter all the details", Toast.LENGTH_LONG).show();
         }
     }
 }

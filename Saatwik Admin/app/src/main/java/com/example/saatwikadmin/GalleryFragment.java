@@ -1,19 +1,26 @@
 package com.example.saatwikadmin;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 
 import com.example.saatwikadmin.Model.MyOrder;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +36,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+
 public class GalleryFragment extends Fragment {
 
     public List<MyOrder> myCart;
@@ -41,6 +50,8 @@ public class GalleryFragment extends Fragment {
     Button button, coupon, not_serving;
     MediaPlayer mediaPlayer;
     int c = 0;
+    final String CHANNEL_ID = "personal notifications";
+    final int NOTIFICATION_ID = 001;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -92,11 +103,10 @@ public class GalleryFragment extends Fragment {
                             myCart = new ArrayList<MyOrder>();
                             for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                                 MyOrder users = dataSnapshot1.getValue(MyOrder.class);
-                                if (dataSnapshot1.child("Mobile").exists()) {
-                                    users.setMobile(dataSnapshot1.child("Mobile").getValue().toString());
-                                }
+                                users.setUserId(dataSnapshot1.getKey());
                                 myCart.add(users);
                             }
+
                             progressBar.setVisibility(view.INVISIBLE);
                             cartRecyclerAdapter = new CartRecyclerAdapter(getActivity(), myCart);
                             recyclerView.setAdapter(cartRecyclerAdapter);
@@ -110,6 +120,7 @@ public class GalleryFragment extends Fragment {
                 }
             }
         }
+
         return view;
     }
 }

@@ -14,20 +14,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.saatwikadmin.TagImageNavigation"></activity>
-        <activity android:name="com.example.saatwikadmin.DeleteImage3" />
-        <activity android:name="com.example.saatwikadmin.DeleteImage2" />
+        <activity android:name=".UpdateItems"></activity>
+        <activity android:name=".AddSlot" />
+        <activity android:name=".TagImageNavigation" />
+        <activity android:name=".DeleteImage3" />
+        <activity android:name=".DeleteImage2" />
         <activity android:name=".Utils.DeleteImage" />
-        <activity android:name="com.example.saatwikadmin.NotServing" />
-        <activity android:name="com.example.saatwikadmin.ChangeTabs" />
-        <activity android:name="com.example.saatwikadmin.CouponForAll" />
-        <activity android:name="com.example.saatwikadmin.OrderHistory" />
+        <activity android:name=".NotServing" />
+        <activity android:name=".ChangeTabs" />
+        <activity android:name=".CouponForAll" />
+        <activity android:name=".OrderHistory" />
         <activity android:name=".up" />
-        <activity android:name="com.example.saatwikadmin.UpdateActivity" />
-        <activity android:name="com.mondkars.mondkarsadmin.TagImages" />
-        <activity android:name="com.mondkars.mondkarsadmin.Login" />
-        <activity android:name="com.example.saatwikadmin.DeleteImage" />
-        <activity android:name="com.example.saatwikadmin.AdminActivity">
+        <activity android:name=".UpdateActivity" />
+        <activity android:name="com.groceries.mondkarsadmin.TagImages" />
+        <activity android:name="com.groceries.mondkarsadmin.Login" />
+        <activity android:name=".DeleteImage" />
+        <activity android:name=".AdminActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,7 +37,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.example.saatwikadmin.MyFirebaseMessagingService">
+        <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

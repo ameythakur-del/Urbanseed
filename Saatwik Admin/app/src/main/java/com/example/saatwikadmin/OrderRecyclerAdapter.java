@@ -37,13 +37,20 @@ public class OrderRecyclerAdapter extends RecyclerView.Adapter<OrderRecyclerAdap
     public void onBindViewHolder(@NonNull OrderRecyclerAdapter.ViewHolder viewHolder, int position) {
         OrderForAdmin orderForAdmin = orderForAdminList.get(position);
 
+        if(orderForAdmin.getPaid() != null) {
+            if (orderForAdmin.getPaid().equals("True")) {
+                viewHolder.paid.setText("Paid");
+            } else {
+                viewHolder.paid.setText("Not Paid");
+            }
+        }
+        viewHolder.quantity.setText(orderForAdmin.getQuantity());
         viewHolder.ietem.setText(orderForAdmin.getItem());
         viewHolder.per.setText(orderForAdmin.getNumber());
         int a = Integer.parseInt(orderForAdmin.getNumber());
-        int b = Integer.parseInt(orderForAdmin.getPrice());
-        int c = a*b;
+        float b = Float.parseFloat(orderForAdmin.getPrice());
+        float c = a*b;
         viewHolder.price.setText("\u20B9" + c);
-
     }
 
     @Override
@@ -55,7 +62,7 @@ public class OrderRecyclerAdapter extends RecyclerView.Adapter<OrderRecyclerAdap
         public TextView
                 ietem,
                 price,
-                per;
+                per, paid, quantity;
         DatabaseReference databaseReference;
 
         public FirebaseAuth firebaseAuth;
@@ -68,7 +75,8 @@ public class OrderRecyclerAdapter extends RecyclerView.Adapter<OrderRecyclerAdap
             firebaseAuth = FirebaseAuth.getInstance();
             ietem = itemView.findViewById(R.id.item);
             price = itemView.findViewById(R.id.price);
-
+            paid = itemView.findViewById(R.id.paid);
+            quantity = itemView.findViewById(R.id.quantity);
             final FirebaseUser user = firebaseAuth.getCurrentUser();
         }
     }

@@ -8,19 +8,29 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <SearchView
-        android:layout_gravity="center"
-        android:id="@+id/search_bar"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:focusable="false"
-        android:queryHint="Search items">
-    </SearchView>
+        android:id="@+id/coupon"
+        android:inputType="textCapCharacters"
+        android:hint="Coupon code"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/view"
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/coupon_discount"
+        android:hint="Coupon discount"
+        android:inputType="number"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coupon_condition"
+        android:hint="Condition to avail discount" />
+
+    <Button
+        android:id="@+id/apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"/>
 </LinearLayout>

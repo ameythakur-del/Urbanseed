@@ -1,4 +1,4 @@
-package com.mondkars.mondkaradmin;
+package com.groceries.mondkaradmin;
 
 import org.junit.Test;
 

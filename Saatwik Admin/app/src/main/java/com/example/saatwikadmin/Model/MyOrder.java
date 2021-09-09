@@ -2,17 +2,19 @@ package com.example.saatwikadmin.Model;
 
 public class MyOrder {
     private String Name;
-    private String Mobile, Address, Pincode;
+    private String Mobile, Address, Pincode, Time, Date;
     private String item;
     private String price;
     private String number;
     private String userId;
     private String status, message;
+    private int total, x, z, f;
 
     public MyOrder() {
     }
 
-    public MyOrder(String name, String mobile, String address, String pincode, String item,  String price, String number, String userId, String status, String message) {
+    public MyOrder(String name, String mobile, String address, String pincode, String item,  String price, String number, String userId, String status, String message, int total, int x, int z, int f, String Time, String Date) {
+        Time = Time;
         Name = name;
         Mobile = mobile;
         Address = address;
@@ -23,6 +25,11 @@ public class MyOrder {
         this.userId = userId;
         this.status = status;
         this.message = message;
+        this.total = total;
+        this.x = x;
+        this.z = z;
+        this.f = f;
+        this.Date = Date;
     }
 
     public String getName() {
@@ -105,5 +112,53 @@ public class MyOrder {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public void setZ(int z) {
+        this.z = z;
+    }
+
+    public int getF() {
+        return f;
+    }
+
+    public void setF(int f) {
+        this.f = f;
+    }
+
+    public String getTime() {
+        return Time;
+    }
+
+    public void setTime(String time) {
+        Time = time;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
     }
 }
