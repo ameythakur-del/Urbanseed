@@ -7,7 +7,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/urbanseedbg2"
+    android:background="#f5f5e5"
     tools:context=".MyMoney">
 
     <TextView
@@ -23,7 +23,7 @@
     <androidx.cardview.widget.CardView
         android:layout_gravity="center"
         app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="#00abe5"
+        app:cardBackgroundColor="@color/main_colour"
         android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -83,7 +83,7 @@
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You will receive this amount on the delivery of your next order."
+        android:text="You will avail this amount as discount on your next order."
         android:id="@+id/availment" />
 
     <TextView
@@ -95,14 +95,14 @@
         android:text="Keep Earning, Keep Sharing !"
         android:textColor="#000000"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:text="Share the app"
-        android:textColor="#000000"
         android:padding="16dp"
+        app:cornerRadius="10dp"
         android:drawableLeft="@drawable/ic_menu_share"
-        android:background="@drawable/add_button"
+        android:backgroundTint="@color/button_colour"
         android:layout_height="wrap_content"
         android:id="@+id/share"/>
 

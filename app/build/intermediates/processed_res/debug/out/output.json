@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "applicationId": "com.mondkars.saatwik",
+  "applicationId": "com.groceries.urbanseed",
   "variantType": "BASE_APK",
   "elements": [
     {
@@ -10,8 +10,8 @@
       "apkData": {
         "type": "MAIN",
         "splits": [],
-        "versionCode": 7,
-        "versionName": "3.0",
+        "versionCode": 8,
+        "versionName": "8.0",
         "outputFile": "app-debug.apk",
         "fullName": "debug",
         "baseName": "debug",
@@ -19,9 +19,9 @@
       },
       "path": "resources-debug.ap_",
       "properties": {
-        "packageId": "com.mondkars.saatwik",
+        "packageId": "com.groceries.urbanseed",
         "split": "",
-        "minSdkVersion": "16"
+        "minSdkVersion": "23"
       }
     }
   ]

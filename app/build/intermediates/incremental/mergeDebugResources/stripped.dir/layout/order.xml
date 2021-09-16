@@ -16,6 +16,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
+            android:background="#FFFFFF"
             android:clickable="true"
             android:id="@+id/order_image_list"
             android:layout_width="150sp"
@@ -24,7 +25,6 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_gravity="right"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -89,27 +89,37 @@
                         />
                 </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp">
 
-                <TextView
-                    android:id="@+id/order_delivers_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Delivers in" />
-
-            </LinearLayout>
             <TextView
+                android:id="@+id/paid"
                 android:layout_marginBottom="3dp"
                 android:layout_marginTop="3dp"
-                android:textColor="#008000"
+                android:textColor="@color/button_colour"
                 android:layout_marginLeft="10dp"
                 android:text="Pay at delivery !"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel"
+                android:elevation="0dp"
+                app:strokeWidth="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:strokeColor="#808080"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel Item"
+                android:textColor="#808080"
+                android:backgroundTint="#FFFFFF"
+                android:layout_gravity="bottom" />
+            </LinearLayout>
     </LinearLayout>
     </LinearLayout>
 

@@ -2,24 +2,22 @@ package ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mondkars.saatwik.R;
+import com.groceries.urabanseed.R;
 
 import java.util.List;
 
-import model.CheckedPrice;
-import model.Item;
 import model.Quantity;
 
 public class QuantityRecyclerAdapter extends RecyclerView.Adapter<QuantityRecyclerAdapter.ViewHolder>{
@@ -28,6 +26,7 @@ public class QuantityRecyclerAdapter extends RecyclerView.Adapter<QuantityRecycl
     private List<Quantity> quantities;
     private CompoundButton lastCheckedRB = null;
     static int count = 0;
+    String mrpv = "0";
 
     public QuantityRecyclerAdapter(Context context, List<Quantity> quantities) {
         this.context = context;
@@ -48,6 +47,16 @@ public class QuantityRecyclerAdapter extends RecyclerView.Adapter<QuantityRecycl
 
         holder.quantity.setText(quantity.getQuantity());
         holder.price.setText("\u20B9" + quantity.getPriced());
+        if(quantity.getMrp() != null){
+            if(quantity.getMrp().equals(quantity.getPriced())){
+
+            }
+            else {
+                mrpv = quantity.getMrp();
+                holder.mrp.setText("\u20B9" + quantity.getMrp());
+                holder.mrp.setPaintFlags(holder.mrp.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+        }
         holder.radioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -65,6 +74,7 @@ public class QuantityRecyclerAdapter extends RecyclerView.Adapter<QuantityRecycl
                 //            intent.putExtra("quantity",Integer.parseInt(quantity.getText().toString()));
                 intent.putExtra("quantity", Quantity);
                 intent.putExtra("price", price);
+                intent.putExtra("mrp", mrpv);
                 LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
             }
         });
@@ -81,7 +91,7 @@ public class QuantityRecyclerAdapter extends RecyclerView.Adapter<QuantityRecycl
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView quantity, price;
+        TextView quantity, price, mrp;
         RadioButton radioButton;
 
         public ViewHolder(View view, Context context) {
@@ -90,7 +100,7 @@ public class QuantityRecyclerAdapter extends RecyclerView.Adapter<QuantityRecycl
             quantity = view.findViewById(R.id.quantity1);
             price = view.findViewById(R.id.price1);
             radioButton = view.findViewById(R.id.radio);
-
+            mrp = view.findViewById(R.id.price2);
 
         }
     }

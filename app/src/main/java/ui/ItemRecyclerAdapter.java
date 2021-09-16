@@ -2,8 +2,6 @@ package ui;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -13,7 +11,6 @@ import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageButton;
-import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,15 +19,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.ValueEventListener;
-import com.google.protobuf.StringValue;
-import com.mondkars.saatwik.DialogFragment;
-import com.mondkars.saatwik.HorizontalNumberPicker;
-import com.mondkars.saatwik.MyCart;
-import com.mondkars.saatwik.R;
+import com.groceries.urabanseed.DialogFragment;
+import com.groceries.urabanseed.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -38,10 +28,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import model.CartItem;
 import model.Item;
 
 public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapter.ViewHolder> implements Filterable {
@@ -86,13 +74,15 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
 
         if (item.getOriginal() != null && item.getOriginal() != item.getPrice()){
             if(!item.getOriginal().isEmpty()) {
-                viewHolder.original.setText("\u20B9" + item.getOriginal());
-                viewHolder.original.setPaintFlags(viewHolder.original.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                 Float a = Float.parseFloat(item.getOriginal());
                 Float b = Float.parseFloat(item.getPrice());
-                Float c = (a-b)/a*100;
+                Float c = (a - b) / a * 100;
                 int d = Math.round(c);
-                viewHolder.percent.setText(String.valueOf(d) + "% off");
+               if(d != 0){
+                    viewHolder.original.setText("\u20B9" + item.getOriginal());
+                    viewHolder.original.setPaintFlags(viewHolder.original.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    viewHolder.percent.setText(String.valueOf(d) + "% off");
+                }
             }
         }
 
@@ -105,7 +95,7 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
                     .into(viewHolder.image);
         }
         else {
-            viewHolder.image.setImageResource(R.drawable.posts);
+            viewHolder.image.setImageResource(R.drawable.transparent_logo);
             viewHolder.image.setAdjustViewBounds(true);
         }
     }
@@ -166,7 +156,7 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
         public Button buy;
         public FirebaseAuth firebaseAuth;
 //        HorizontalNumberPicker quantity = (HorizontalNumberPicker) itemView.findViewById(R.id.np_channel_nr);
-        String text = "<font color=#000000>ADD</font> <font color=#FF69B4>+</font>";
+        String text = "<font color=#000000>ADD</font> <font color=#1D3C78>+</font>";
         // get a reference to the component
 
         DatabaseReference data = FirebaseDatabase.getInstance().getReference().child("Stop");
@@ -285,7 +275,6 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
 //                }
 //            }
             if (v == buy) {
-
                 if(FirebaseAuth.getInstance().getCurrentUser() != null) {
                     int position = getAdapterPosition();
                     final Item item = itemList.get(position);

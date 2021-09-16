@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Change Number"
-        android:textColor="#0C73EB"
+        android:textColor="@color/main_colour"
         app:layout_constraintBottom_toBottomOf="@+id/l1"
         app:layout_constraintEnd_toEndOf="@+id/header" />
 
@@ -111,20 +111,21 @@
             app:layout_constraintEnd_toEndOf="@id/otp_view"
             app:layout_constraintTop_toBottomOf="@id/otp_view" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/round_button"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
+        android:backgroundTint="@color/button_colour"
+        android:padding="15dp"
         android:text="Verify"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="100dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/capture" />
 </androidx.constraintlayout.widget.ConstraintLayout>

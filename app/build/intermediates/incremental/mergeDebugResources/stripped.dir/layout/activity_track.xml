@@ -7,12 +7,17 @@
     tools:context=".TrackActivity"
     android:background="#FFFFFF">
 
-    <View
-        android:id="@+id/view_divider"
-        android:layout_width="409dp"
-        android:layout_height="2dp"
-        android:background="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <TextView
+        android:layout_margin="30dp"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/varela_round"
+        android:text="Track Order"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,23 +25,24 @@
         android:id="@+id/view_order_placed"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:background="@drawable/shape_status_completed"
         app:layout_constraintBottom_toBottomOf="@+id/orderplaced"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/orderplaced" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <ImageView
         android:id="@+id/orderplaced"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/posts"
+        android:src="@drawable/processed"
         app:layout_constraintStart_toEndOf="@+id/view_order_placed"
-        app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
     <View
         app:layout_constraintTop_toTopOf="@+id/orderplaced"
         app:layout_constraintEnd_toEndOf="@+id/orderplaced"
@@ -85,7 +91,7 @@
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toEndOf="@+id/view_order_confirmed"
         app:layout_constraintTop_toBottomOf="@+id/orderplaced"
-        android:src="@drawable/posts"
+        android:src="@drawable/confirmed"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginLeft="20dp" />
@@ -127,7 +133,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/main_colour"
         app:layout_constraintBottom_toTopOf="@+id/view_order_confirmed"
         app:layout_constraintEnd_toEndOf="@+id/view_order_placed"
         app:layout_constraintStart_toStartOf="@+id/view_order_placed"
@@ -150,7 +156,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/posts"
+        android:src="@drawable/placed"
         app:layout_constraintStart_toEndOf="@+id/view_order_processed"
         app:layout_constraintTop_toBottomOf="@+id/img_orderconfirmed" />
     <View
@@ -191,7 +197,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/main_colour"
         app:layout_constraintBottom_toTopOf="@+id/view_order_processed"
         app:layout_constraintEnd_toEndOf="@+id/view_order_confirmed"
         app:layout_constraintStart_toStartOf="@+id/view_order_confirmed"
@@ -215,7 +221,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/posts"
+        android:src="@drawable/delivered"
         app:layout_constraintStart_toEndOf="@+id/view_order_pickup"
         app:layout_constraintTop_toBottomOf="@+id/orderprocessed" />
     <View
@@ -259,7 +265,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:alpha="0.5"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/main_colour"
         app:layout_constraintBottom_toTopOf="@+id/view_order_pickup"
         app:layout_constraintEnd_toEndOf="@+id/view_order_processed"
         app:layout_constraintStart_toStartOf="@+id/view_order_processed"

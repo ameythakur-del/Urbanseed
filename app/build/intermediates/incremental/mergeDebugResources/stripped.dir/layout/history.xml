@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shape="ring"
+        app:cardCornerRadius="75dp">
+
+        <ImageView
+            android:src="@drawable/transparent_logo"
+            android:id="@+id/image"
+            android:scaleType="fitXY"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:fontFamily="@font/varela_round" />
+
+    <TextView
+        android:textStyle="bold"
+        android:fontFamily="@font/varela_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantity"/>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <TextView
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/varela_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"/>
+
+            <LinearLayout
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_gravity="right"
+                android:fontFamily="@font/varela_round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/number"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#c0c0c0"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

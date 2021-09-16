@@ -10,7 +10,7 @@
         android:gravity="center"
         android:background="#FFFFFF"
         android:id="@+id/btn_less"
-        android:textColor="#fa638c"
+        android:textColor="@color/main_colour"
         android:layout_marginLeft="2dp"
         android:layout_width="0sp"
         android:layout_height="28dp"
@@ -34,7 +34,7 @@
     <TextView
         android:gravity="center"
         android:clickable="true"
-        android:textColor="#fa638c"
+        android:textColor="@color/main_colour"
         android:background="#FFFFFF"
         android:id="@+id/btn_more"
         android:layout_width="0sp"

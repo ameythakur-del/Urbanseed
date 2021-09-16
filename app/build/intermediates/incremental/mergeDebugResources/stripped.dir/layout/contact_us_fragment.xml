@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.mondkars.saatwik.ContactUs"
+    tools:context="com.groceries.urabanseed.ContactUs"
     android:orientation="vertical"
     android:background="#F0F0ED">
 
@@ -93,39 +93,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Also Rate us at"
-                    android:textColor="#000000" />
 
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/mapsView"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/maps"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_marginLeft="5dp"
-                        android:id="@+id/maps_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Urbanseed"
-                        android:textColor="#000000"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/mapsView"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -185,8 +153,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9158385531"
-                        android:textColor="@color/colorAccent"
+                        android:text="9403768656"
+                        android:textColor="@color/main_colour"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView2"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -238,13 +206,13 @@
                     android:layout_marginLeft="5dp"
                     android:clickable="true"
                     android:text="www.upscale.com"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/main_colour" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Copyright ©2020 Urbanseed. All rights reserved." />
+                android:text="Copyright ©2021 Urbanseed. All rights reserved." />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

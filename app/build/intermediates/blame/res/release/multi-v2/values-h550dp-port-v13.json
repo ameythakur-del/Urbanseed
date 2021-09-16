@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\AndroidStudioProjects\\Startup\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Amey Thakur\\.gradle\\wrapper\\caches\\transforms-2\\files-2.1\\daec22453385074ed126f39507bcab77\\material-1.5.0-alpha03\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "76",
+                        "endOffsets": "127"
+                    }
+                }
+            ]
+        }
+    ]
+}

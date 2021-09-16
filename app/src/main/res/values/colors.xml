@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#F9F8FA</color>
-    <color name="colorAccent">#fa638c</color>
-    <color name="mtrl_textinput_default_box_stroke_color">#0C73EB</color>
-    <color name="mtrl_textinput_default_hint_color">#0C73EB</color>
-    <color name="colorTransparent">#f3fafe</color>
-
+    <color name="mtrl_textinput_default_box_stroke_color">#1D3C78</color>
+    <color name="mtrl_textinput_default_hint_color">#1D3C78</color>
+    <color name="button_colour">#509605</color>
+    <color name="main_colour">#1D3C78</color>
 </resources>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.mondkars.saatwik.ui.home.HomeFragment"
+        android:name="com.groceries.urabanseed.ui.home.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.mondkars.saatwik.ui.home.HomeSecondFragment"
+        android:name="com.groceries.urabanseed.ui.home.HomeSecondFragment"
         tools:layout="@layout/fragment_home_second">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
@@ -29,6 +29,7 @@
             android:name="myArg"
             app:argType="string" />
     </fragment>
+
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -59,6 +60,7 @@
 
         </menu>
     </fragment>
+
 
     <fragment
         android:id="@+id/nav_cart"

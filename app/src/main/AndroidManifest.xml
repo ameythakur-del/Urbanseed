@@ -1,110 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mondkars.saatwik">
+    package="com.groceries.urabanseed">
+
 
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name= "android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name= "android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@drawable/icon"
+        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".MyMoney"
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:name="com.groceries.urabanseed.OrderHistory"
+            android:theme="@style/orderHistory">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.groceries.urabanseed.OrderHistory" />
+        </activity>
+        <activity
+            android:name="com.groceries.urabanseed.PaymentActivity"
+            android:theme="@style/paymentActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.groceries.urabanseed.PaymentActivity" />
+        </activity>
+        <activity
+            android:name="com.groceries.urabanseed.MyMoney"
             android:theme="@style/MyMoney">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.MyMoney" />
+                android:value="com.groceries.urabanseed.MyMoney" />
         </activity>
         <activity
-            android:name=".OTPActivity"
+            android:name="com.groceries.urabanseed.OTPActivity"
             android:theme="@style/OTPActivity" />
         <activity
-            android:name=".Update"
+            android:name="com.groceries.urabanseed.Update"
             android:theme="@style/UpdateActivity" />
         <activity
-            android:name=".TrackActivity"
+            android:name="com.groceries.urabanseed.TrackActivity"
             android:theme="@style/TrackActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.TrackActivity" />
+                android:value="com.groceries.urabanseed.TrackActivity" />
         </activity>
         <activity
-            android:name=".ConfirmActivity"
+            android:name="com.groceries.urabanseed.ConfirmActivity"
             android:theme="@style/ConfirmActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.ConfirmActivity" />
+                android:value="com.groceries.urabanseed.ConfirmActivity" />
         </activity>
         <activity
-            android:name=".CouponActivity"
+            android:name="com.groceries.urabanseed.CouponActivity"
             android:theme="@style/CouponActivity"
             android:windowSoftInputMode="stateAlwaysHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.CouponActivity" />
+                android:value="com.groceries.urabanseed.CouponActivity" />
         </activity>
         <activity
-            android:name=".ChangeAddress"
+            android:name="com.groceries.urabanseed.ChangeAddress"
             android:theme="@style/ChangeAddress">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.ChangeAddress" />
+                android:value="com.groceries.urabanseed.ChangeAddress" />
         </activity>
         <activity
-            android:name=".AboutUsFragment"
+            android:name="com.groceries.urabanseed.AboutUsFragment"
             android:theme="@style/ColorTheme3">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.AboutUsFragment" />
+                android:value="com.groceries.urabanseed.AboutUsFragment" />
         </activity>
         <activity
-            android:name=".ContactUs"
+            android:name="com.groceries.urabanseed.ContactUs"
             android:theme="@style/ColorTheme4">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.ContactUs" />
+                android:value="com.groceries.urabanseed.ContactUs" />
         </activity>
         <activity
-            android:name=".GalleryFragment"
+            android:name="com.groceries.urabanseed.GalleryFragment"
             android:theme="@style/ColorTheme5">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.GalleryFragment" />
+                android:value="com.groceries.urabanseed.GalleryFragment" />
         </activity>
         <activity
-            android:name=".MyCart"
+            android:name="com.groceries.urabanseed.MyCart"
             android:theme="@style/ColorTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.MyCart" />
+                android:value="com.groceries.urabanseed.MyCart" />
         </activity>
         <activity
-            android:name=".wishlist"
+            android:name="com.groceries.urabanseed.wishlist"
             android:theme="@style/ColorTheme2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mondkars.saatwik.wishlist" />
+                android:value="com.groceries.urabanseed.wishlist" />
         </activity>
         <activity
-            android:name=".Activity2"
+            android:name="com.groceries.urabanseed.Activity2"
             android:theme="@style/Activity2" />
         <activity
-            android:name=".UserDetailsActivity"
+            android:name="com.groceries.urabanseed.UserDetailsActivity"
             android:theme="@style/ActivityUserDetails" />
+        <activity android:name="com.groceries.urabanseed.Main2Activity" />
         <activity
-            android:name=".Main2Activity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.groceries.urabanseed.MainActivity"
             android:theme="@style/mainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

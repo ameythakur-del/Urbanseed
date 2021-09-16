@@ -1,14 +1,15 @@
 package model;
 
 public class Quantity {
-    String quantity, priced;
+    String quantity, priced, mrp;
 
     public Quantity() {
     }
 
-    public Quantity(String quantity, String priced) {
+    public Quantity(String quantity, String priced, String mrp) {
         this.quantity = quantity;
         this.priced = priced;
+        this.mrp = mrp;
     }
 
     public String getQuantity() {
@@ -25,5 +26,13 @@ public class Quantity {
 
     public void setPriced(String priced) {
         this.priced = priced;
+    }
+
+    public String getMrp() {
+        return mrp;
+    }
+
+    public void setMrp(String mrp) {
+        this.mrp = mrp;
     }
 }

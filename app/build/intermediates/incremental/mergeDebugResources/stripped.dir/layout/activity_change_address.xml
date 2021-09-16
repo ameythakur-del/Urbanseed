@@ -10,14 +10,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="#0C73EB"
+        app:boxStrokeColor="@color/main_colour"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:hint="Name"
         app:boxStrokeWidth="0.5dp"
-        app:hintTextColor="#0C73EB">
+        app:hintTextColor="@color/main_colour">
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -41,12 +41,12 @@
             app:boxStrokeWidth="0.5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="#0C73EB"
+            app:boxStrokeColor="@color/main_colour"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:hint="Pincode"
-            app:hintTextColor="#0C73EB">
+            app:hintTextColor="@color/main_colour">
 
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
@@ -57,9 +57,8 @@
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/verify_change"
-            android:background="@drawable/semi_round_button"
             android:textColor="#FFFFFF"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -86,10 +85,10 @@
             android:layout_marginRight="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="#0C73EB"
+            app:boxStrokeColor="@color/main_colour"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:hint="State"
-            app:hintTextColor="#0C73EB">
+            app:hintTextColor="@color/main_colour">
 
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
@@ -109,10 +108,10 @@
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="#0C73EB"
+            app:boxStrokeColor="@color/main_colour"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:hint="City"
-            app:hintTextColor="#0C73EB">
+            app:hintTextColor="@color/main_colour">
 
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
@@ -133,10 +132,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="#0C73EB"
+        app:boxStrokeColor="@color/main_colour"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:hint="House No./Building Name"
-        app:hintTextColor="#0C73EB">
+        app:hintTextColor="@color/main_colour">
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -153,11 +152,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        app:boxStrokeColor="#0C73EB"
+        app:boxStrokeColor="@color/main_colour"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:hint="Road name, Area, Colony"
         app:boxStrokeWidth="0.5dp"
-        app:hintTextColor="#0C73EB">
+        app:hintTextColor="@color/main_colour">
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
@@ -170,19 +169,23 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
-        <Button
+        android:orientation="vertical">
+        <com.google.android.material.button.MaterialButton
             android:textColor="#FFFFFF"
+            app:cornerRadius="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
             android:id="@+id/save_change"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_button"
+            android:backgroundTint="@color/button_colour"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            android:layout_margin="50dp"
             android:text="Save details" />
 
     </LinearLayout>

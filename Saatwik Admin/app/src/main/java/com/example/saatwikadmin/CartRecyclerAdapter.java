@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +30,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -284,6 +291,10 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
         public OrderRecyclerAdapter orderRecyclerAdapter;
         public RecyclerView recyclerView;
         DatabaseReference reference, totalReference;
+        private FirebaseFirestore db = FirebaseFirestore.getInstance();
+        private CollectionReference aproveReference = db.collection("Confirmed Orders");
+        private CollectionReference registerReference = db.collection("Registering users");
+        private CollectionReference deliverReference = db.collection("invoices");
 
         int a=0;
         Button delivered, aprove, decline, out, undelivered;
@@ -338,24 +349,32 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
                 DatabaseReference admin = FirebaseDatabase.getInstance().getReference().child("Order for admin").child(cartItem.getUserId());
 
-                admin.addListenerForSingleValueEvent(new ValueEventListener() {
-
+                registerReference.document(cartItem.getUserId()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
+                    public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                        cartItem.setEmail(documentSnapshot.getString("Email"));
+                        deliverReference.document(cartItem.getMobile()).set(cartItem);
 
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        admin.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                                     {
                                         OrderForAdmin orderForAdmin = dataSnapshot1.getValue(OrderForAdmin.class);
                                         historyReference.child(cartItem.getMobile()).child(currentDateTimeString).child(orderForAdmin.getItem()).setValue(orderForAdmin);
+                                        deliverReference.document(cartItem.getMobile()).collection("Products").document(orderForAdmin.getItem()).set(orderForAdmin);
                                     }
                                 }
+                                dataSnapshot.getRef().removeValue();
+                            }
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
 
                             }
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                        });
                     }
-
                 });
 
                 DatabaseReference donor = FirebaseDatabase.getInstance().getReference().child("Donors");
@@ -497,28 +516,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                         Toast.makeText(context, "Couldnt remove", Toast.LENGTH_LONG).show();
                     }
                 });
-                DatabaseReference adminOrder = FirebaseDatabase.getInstance().getReference().child("Order for admin").child(cartItem.getMobile());
-                adminOrder.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (final DataSnapshot dataSnapshot4 : dataSnapshot.getChildren()) {
-                            {
-                                {
-                                    dataSnapshot4.getRef().removeValue();
-                                }
-                            }
-                        }
-                    }
 
-
-
-
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
                 DatabaseReference user = FirebaseDatabase.getInstance().getReference().child("Users").child(cartItem.getMobile());
                 user.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -542,8 +540,6 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                 int position = getAdapterPosition();
                 final MyOrder cartItem = myCart.get(position);
                 final String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
-
-
 
                 final String a = cartItem.getMobile();
                 Query query = FirebaseDatabase.getInstance().getReference().child("Order").orderByChild("userPhone").equalTo(a);
@@ -627,6 +623,15 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
             if (v == aprove){
                 int position = getAdapterPosition();
                 final MyOrder cartItem = myCart.get(position);
+
+                registerReference.document(cartItem.getUserId()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                        cartItem.setEmail(documentSnapshot.getString("Email"));
+                        aproveReference.document(cartItem.getMobile() + java.text.DateFormat.getDateTimeInstance().format(new Date())).set(cartItem);
+                    }
+                });
+
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users").child(cartItem.getMobile());
                 reference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override

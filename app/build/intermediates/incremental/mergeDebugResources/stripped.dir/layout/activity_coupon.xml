@@ -29,6 +29,7 @@
                 android:layout_gravity="center_horizontal">
 
                 <TextView
+
                     android:layout_marginBottom="25dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -45,11 +46,11 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:boxStrokeColor="#0C73EB"
+                        app:boxStrokeColor="@color/main_colour"
                         app:boxStrokeWidth="2dp"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:hint="Referers Mobile No."
-                        app:hintTextColor="#0C73EB"
+                        android:hint="Referrer's Mobile No."
+                        app:hintTextColor="@color/main_colour"
                         app:prefixText="+91">
 
                         <!--this is the actual edit text which takes the input-->
@@ -80,26 +81,31 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:text="Back"
-                    android:textColor="#0C73EB"/>
+                    android:textColor="@color/main_colour"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coupon_view"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false" />
     <LinearLayout
         android:gravity="bottom"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <Button
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/refferal_button3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
             android:text="Apply Discount"
-            android:textAllCaps="false"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:background="@drawable/round_button"
-            android:layout_marginTop="16dp"
-            android:textStyle="bold"
-            />
+            app:cornerRadius="5dp"
+            android:backgroundTint="@color/button_colour"/>
     </LinearLayout>
 </LinearLayout>

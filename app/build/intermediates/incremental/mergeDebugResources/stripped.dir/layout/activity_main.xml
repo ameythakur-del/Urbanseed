@@ -6,26 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/mylayout"
-    android:background="#FFFFFF">
+    android:background="#f3fff2">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/posts"
+        android:src="@drawable/homescreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        android:text="Bringing Quality at Your Door"-->
-<!--        android:textColor="#000000"-->
-<!--        android:textSize="20dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

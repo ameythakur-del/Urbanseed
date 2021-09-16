@@ -14,7 +14,8 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:src="@drawable/posts"
+            android:background="#FFFFFF"
+            android:src="@drawable/transparent_logo"
             android:clickable="true"
             android:id="@+id/item_image_list"
             android:layout_width="150dp"
@@ -39,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_weight="3.12"
-                    android:fontFamily="@font/metrophobic"
+                    android:fontFamily="@font/varela_round"
                     android:hint="Title"
                     android:paddingLeft="10dp"
                     android:textColor="#000000"
@@ -64,9 +65,7 @@
                     android:layout_weight="0.88"
                     android:background="@drawable/add_button"
                     android:text="+  Add"
-                    android:fontFamily="@font/metrophobic"
                     android:layout_marginTop="10dp"
-
                     android:layout_marginRight="10dp"
                     android:textAllCaps="false"
                     android:textColor="#000000"
@@ -102,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/discount_percent"
                     android:fontFamily="@font/metrophobic"
-                    android:textColor="#008000" />
+                    android:textColor="@color/button_colour" />
 
             </LinearLayout>
             <LinearLayout

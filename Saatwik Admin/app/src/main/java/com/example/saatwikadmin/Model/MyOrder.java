@@ -7,13 +7,14 @@ public class MyOrder {
     private String price;
     private String number;
     private String userId;
+    private String email;
     private String status, message;
     private int total, x, z, f;
 
     public MyOrder() {
     }
 
-    public MyOrder(String name, String mobile, String address, String pincode, String item,  String price, String number, String userId, String status, String message, int total, int x, int z, int f, String Time, String Date) {
+    public MyOrder(String name, String mobile, String address, String pincode, String item,  String price, String number, String userId, String status, String message, int total, int x, int z, int f, String Time, String Date, String email) {
         Time = Time;
         Name = name;
         Mobile = mobile;
@@ -30,6 +31,7 @@ public class MyOrder {
         this.z = z;
         this.f = f;
         this.Date = Date;
+        this.email = email;
     }
 
     public String getName() {
@@ -160,5 +162,13 @@ public class MyOrder {
 
     public void setDate(String date) {
         Date = date;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

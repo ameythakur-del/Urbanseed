@@ -15,6 +15,11 @@
             android:title="My Orders" />
 
         <item
+            android:id="@+id/order_history"
+            android:icon="@drawable/ic_assignment_returned_black_24dp"
+            android:title="Order History" />
+
+        <item
             android:id="@+id/my_money"
             android:icon="@drawable/ic_baseline_attach_money_24"
             android:title="My Money" />

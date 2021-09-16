@@ -37,12 +37,57 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1024542344823:android:f0519628d763a842262872",
+        "android_client_info": {
+          "package_name": "com.groceries.urbanseed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024542344823-7par7v5dpp0n1o0ialb29egdj3qlnft9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs3sfjGpHvgwgOba0cqkGzteR8l2GZre0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024542344823-7par7v5dpp0n1o0ialb29egdj3qlnft9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1024542344823:android:bb97c347a7e064d6262872",
         "android_client_info": {
           "package_name": "com.mondkars.saatwik"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1024542344823-ejb5dqi3s0ianof9k8ccjghofe2lulah.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mondkars.saatwik",
+            "certificate_hash": "6c6014a1ae387a9c0752c332ff5782bb8b43edfd"
+          }
+        },
+        {
+          "client_id": "1024542344823-jgm8hi8pm4r0lo96kd8qgtghlol0oq88.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mondkars.saatwik",
+            "certificate_hash": "229b0df6c2ec0f3915650086d17fc6e8539cbfb2"
+          }
+        },
         {
           "client_id": "1024542344823-7par7v5dpp0n1o0ialb29egdj3qlnft9.apps.googleusercontent.com",
           "client_type": 3

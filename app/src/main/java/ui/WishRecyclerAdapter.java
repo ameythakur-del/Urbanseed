@@ -15,9 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.mondkars.saatwik.Activity2;
-import com.mondkars.saatwik.MyCart;
-import com.mondkars.saatwik.R;
+import com.groceries.urabanseed.Activity2;
+import com.groceries.urabanseed.MyCart;
+import com.groceries.urabanseed.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -69,7 +69,7 @@ public class WishRecyclerAdapter extends RecyclerView.Adapter<WishRecyclerAdapte
                     .into(viewHolder.image);
         }
         else {
-            viewHolder.image.setImageResource(R.drawable.posts);
+            viewHolder.image.setImageResource(R.drawable.transparent_logo);
             viewHolder.image.setAdjustViewBounds(true);
         }
 

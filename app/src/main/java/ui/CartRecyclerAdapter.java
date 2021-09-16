@@ -14,7 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mondkars.saatwik.R;
+import com.groceries.urabanseed.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -64,7 +64,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                     .into(viewHolder.image);
         }
         else {
-            viewHolder.image.setImageResource(R.drawable.posts);
+            viewHolder.image.setImageResource(R.drawable.transparent_logo);
             viewHolder.image.setAdjustViewBounds(true);
         }
     }
@@ -138,7 +138,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
             if (v == buy) {
                 int position = getAdapterPosition();
                 CartItem cartitem = myCart.get(position);
-                reference = FirebaseDatabase.getInstance().getReference().child("cart").child(cartitem.getUserPhone().toString() + cartitem.getItem());
+            reference = FirebaseDatabase.getInstance().getReference().child("cart").child(cartitem.getUserPhone().toString() + cartitem.getItem() + cartitem.getPer());
                 reference.removeValue();
                 ((Activity) context).recreate();
             }

@@ -22,4 +22,15 @@
         android:layout_gravity="center"
         android:text="Start Serving" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dates"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_button"
+        android:layout_gravity="center"
+        android:text="Don't Serve on this date" />
 </LinearLayout>
