@@ -349,11 +349,13 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
                 DatabaseReference admin = FirebaseDatabase.getInstance().getReference().child("Order for admin").child(cartItem.getUserId());
 
+                String date = java.text.DateFormat.getDateTimeInstance().format(new Date());
+
                 registerReference.document(cartItem.getUserId()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                         cartItem.setEmail(documentSnapshot.getString("Email"));
-                        deliverReference.document(cartItem.getMobile()).set(cartItem);
+                        deliverReference.document(cartItem.getMobile() + date).set(cartItem);
 
                         admin.addListenerForSingleValueEvent(new ValueEventListener() {
 
@@ -363,7 +365,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
                                     {
                                         OrderForAdmin orderForAdmin = dataSnapshot1.getValue(OrderForAdmin.class);
                                         historyReference.child(cartItem.getMobile()).child(currentDateTimeString).child(orderForAdmin.getItem()).setValue(orderForAdmin);
-                                        deliverReference.document(cartItem.getMobile()).collection("Products").document(orderForAdmin.getItem()).set(orderForAdmin);
+                                        deliverReference.document(cartItem.getMobile() + date).collection("Products").document(orderForAdmin.getItem()).set(orderForAdmin);
                                     }
                                 }
                                 dataSnapshot.getRef().removeValue();

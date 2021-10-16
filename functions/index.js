@@ -42,7 +42,7 @@ exports.onItemCreation = functions.firestore.document('Registering users/{userId
 exports.onItemConfirm = functions.firestore.document('Confirmed Orders/{userId}')
  .onCreate(async(snapshot, context) => {
      const itemDataSnap = await snapshot.ref.get()
-     var fieldheader = "Dear " + itemDataSnap.data().name + ", <br><br> Thank you for your shopping with us! Your order is confirmed by our team. Here are the further details.<br><br> Name : " + itemDataSnap.data().name + "<br><br> Delivery Address : " + itemDataSnap.data().address + "<br><br> Estimated Delivery Time : " + itemDataSnap.data().date + ", " + itemDataSnap.data().time  + "<br><br> Mobile Number : " + itemDataSnap.data().mobile
+     var fieldheader = "Dear " + itemDataSnap.data().name + ", <br><br> Thank you for shopping with us! Your order is confirmed by our team. Here are the further details.<br><br> Name : " + itemDataSnap.data().name + "<br><br> Delivery Address : " + itemDataSnap.data().address + "<br><br> Estimated Delivery Time : " + itemDataSnap.data().date + ", " + itemDataSnap.data().time  + "<br><br> Mobile Number : " + itemDataSnap.data().mobile
      return admin.firestore().collection('mail').add({
         to: [itemDataSnap.data().email],
         message: {
@@ -54,13 +54,15 @@ exports.onItemConfirm = functions.firestore.document('Confirmed Orders/{userId}'
  });
 
 exports.onSendInvoice = functions.firestore.document('invoices/{userId}')
- .onCreate(async(snapshot, context) => {
-     var fieldheader = "Dear "
+ .onCreate(async(snapshot, context) => { 
      const itemDataSnap = await snapshot.ref.get()
+     var fieldheader = "Dear " + itemDataSnap.data().name + ", <br><br> We hope you have received a smooth home delivery. We would love to hear your thoughts or feedback on how we can improve your experience! We would be grateful to you if you fill the following feedback form." + "<br><br> https://docs.google.com/forms/d/e/1FAIpQLScyZqDD2_6MGyJSfp4ZyjTTAfcwRv0B7XZdaDUqnfOagx74ZQ/viewform?usp=sf_link"
      return admin.firestore().collection('mail').add({
         to: [itemDataSnap.data().email],
-        subject: 'New Follower',
-        templateId: 'd-33834422b8954619a487dd8ab14938b7'
+	message: {
+          subject: itemDataSnap.data().name + ", Thank you for Ordering with us",
+          html: fieldheader
+ 	}
       }).then(() => console.log('Queued email for delivery!'))
 	.catch(err => console.log(err));
  });
