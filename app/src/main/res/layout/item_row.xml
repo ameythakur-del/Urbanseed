@@ -17,6 +17,7 @@
             android:background="#FFFFFF"
             android:src="@drawable/transparent_logo"
             android:clickable="true"
+            android:scaleType="fitXY"
             android:id="@+id/item_image_list"
             android:layout_width="150dp"
             android:layout_height="match_parent"/>

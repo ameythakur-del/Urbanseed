@@ -14,8 +14,8 @@ android {
         applicationId "com.groceries.urbanseed"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 9
-        versionName "9.0"
+        versionCode 10
+        versionName "10.0"
         multiDexEnabled true
         aaptOptions { cruncherEnabled = false }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

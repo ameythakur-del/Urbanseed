@@ -89,6 +89,12 @@
     <style name="Base.Theme.MaterialComponents.Light.Dialog" parent="Base.V21.Theme.MaterialComponents.Light.Dialog"/>
     <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="Base.V21.ThemeOverlay.AppCompat.Dialog"/>
     <style name="Base.ThemeOverlay.Material3.BottomSheetDialog" parent="Base.V21.ThemeOverlay.Material3.BottomSheetDialog"/>
+    <style name="Base.ThemeOverlay.Material3.Dialog.Alert.Framework" parent="Base.ThemeOverlay.MaterialComponents.Dialog.Alert.Framework">
+    <item name="android:buttonBarButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog.Flush</item>
+  </style>
+    <style name="Base.ThemeOverlay.Material3.Light.Dialog.Alert.Framework" parent="Base.ThemeOverlay.MaterialComponents.Light.Dialog.Alert.Framework">
+    <item name="android:buttonBarButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog.Flush</item>
+  </style>
     <style name="Base.ThemeOverlay.MaterialComponents.Dialog" parent="Base.V14.ThemeOverlay.MaterialComponents.Dialog">
     <item name="android:windowBackground">@drawable/mtrl_dialog_background</item>
   </style>
@@ -399,6 +405,8 @@
     <item name="android:fontFamily">sans-serif-medium</item>
     <item name="android:textStyle">normal</item>
   </style>
+    <style name="ThemeOverlay.Material3.Dialog.Alert.Framework" parent="Base.ThemeOverlay.Material3.Dialog.Alert.Framework"/>
+    <style name="ThemeOverlay.Material3.Light.Dialog.Alert.Framework" parent="Base.ThemeOverlay.Material3.Light.Dialog.Alert.Framework"/>
     <style name="ThemeOverlay.MaterialComponents.BottomSheetDialog" parent="Base.V21.ThemeOverlay.MaterialComponents.BottomSheetDialog"/>
     <style name="ThemeOverlay.MaterialComponents.Dialog.Alert.Framework" parent="Base.ThemeOverlay.MaterialComponents.Dialog.Alert.Framework"/>
     <style name="ThemeOverlay.MaterialComponents.Light.Dialog.Alert.Framework" parent="Base.ThemeOverlay.MaterialComponents.Light.Dialog.Alert.Framework"/>

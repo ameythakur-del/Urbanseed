@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.groceries.urbanseed"
-4    android:versionCode="8"
-5    android:versionName="8.0" >
+4    android:versionCode="10"
+5    android:versionName="10.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
@@ -43,7 +43,7 @@
 22        android:allowBackup="true"
 22-->D:\AndroidStudioProjects\Startup\app\src\main\AndroidManifest.xml:17:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.7.0-alpha01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\ae844638e551a2c0b54f210438092997\core-1.7.0-alpha01\AndroidManifest.xml:24:18-86
+23-->[androidx.core:core:1.7.0-beta02] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\b5f2a515d50fac925f9f8683fbfcd7d7\core-1.7.0-beta02\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:extractNativeLibs="false"
 26        android:icon="@drawable/icon"
@@ -290,27 +290,27 @@
 154-->D:\AndroidStudioProjects\Startup\app\src\main\AndroidManifest.xml:144:13-54
 155
 156        <activity
-156-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:12:9-16:20
+156-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:12:9-16:20
 157            android:name="com.stripe.android.view.AddSourceActivity"
-157-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:13:13-69
+157-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:13:13-69
 158            android:theme="@style/StripeDefaultTheme"
-158-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:14:13-54
+158-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:14:13-54
 159            android:windowSoftInputMode="stateVisible" >
-159-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:15:13-55
+159-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:15:13-55
 160        </activity>
 161        <activity
-161-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:17:9-20:20
+161-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:17:9-20:20
 162            android:name="com.stripe.android.view.PaymentMethodsActivity"
-162-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:18:13-74
+162-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:18:13-74
 163            android:theme="@style/StripeDefaultTheme" >
-163-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:19:13-54
+163-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:19:13-54
 164        </activity>
 165        <activity
-165-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:21:9-24:20
+165-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:21:9-24:20
 166            android:name="com.stripe.android.view.PaymentFlowActivity"
-166-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:22:13-71
+166-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:22:13-71
 167            android:theme="@style/StripeDefaultTheme" >
-167-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\86d3df77f95b697fea4d66dec6555466\jetified-stripe-android-8.1.0\AndroidManifest.xml:23:13-54
+167-->[com.stripe:stripe-android:8.1.0] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\34cdaad25ecb519899c1b9774fc09900\jetified-stripe-android-8.1.0\AndroidManifest.xml:23:13-54
 168        </activity>
 169
 170        <receiver android:name="com.razorpay.RzpTokenReceiver" >
@@ -570,13 +570,13 @@
 306        </service>
 307
 308        <provider
-308-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\25121f3617ec6ecce02f6369b1d4a0e1\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+308-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\887c25dd05c310f059a51d1800e202e4\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 309            android:name="com.squareup.picasso.PicassoProvider"
-309-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\25121f3617ec6ecce02f6369b1d4a0e1\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+309-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\887c25dd05c310f059a51d1800e202e4\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 310            android:authorities="com.groceries.urbanseed.com.squareup.picasso"
-310-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\25121f3617ec6ecce02f6369b1d4a0e1\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+310-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\887c25dd05c310f059a51d1800e202e4\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 311            android:exported="false" />
-311-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\25121f3617ec6ecce02f6369b1d4a0e1\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+311-->[com.squareup.picasso:picasso:2.71828] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\887c25dd05c310f059a51d1800e202e4\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 312        <!--
 313             FirebaseMessagingService performs security checks at runtime,
 314             but set to not exported to explicitly avoid allowing another app to call it.
@@ -672,25 +672,25 @@
 363-->[com.google.android.gms:play-services-basement:17.2.1] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\95a75e6fd1b94ab1179f6284a4e80063\jetified-play-services-basement-17.2.1\AndroidManifest.xml:25:13-66
 364
 365        <provider
-365-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\e69ba8253eab6fa0150a3a055af31362\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:26:9-34:20
+365-->[androidx.emoji2:emoji2:1.0.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\306ba6a361e819bd85c227b0e7a6a28c\jetified-emoji2-1.0.0-beta01\AndroidManifest.xml:26:9-34:20
 366            android:name="androidx.startup.InitializationProvider"
-366-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\e69ba8253eab6fa0150a3a055af31362\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:27:13-67
+366-->[androidx.emoji2:emoji2:1.0.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\306ba6a361e819bd85c227b0e7a6a28c\jetified-emoji2-1.0.0-beta01\AndroidManifest.xml:27:13-67
 367            android:authorities="com.groceries.urbanseed.androidx-startup"
-367-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\e69ba8253eab6fa0150a3a055af31362\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:28:13-68
+367-->[androidx.emoji2:emoji2:1.0.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\306ba6a361e819bd85c227b0e7a6a28c\jetified-emoji2-1.0.0-beta01\AndroidManifest.xml:28:13-68
 368            android:exported="false" >
-368-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\e69ba8253eab6fa0150a3a055af31362\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:29:13-37
+368-->[androidx.emoji2:emoji2:1.0.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\306ba6a361e819bd85c227b0e7a6a28c\jetified-emoji2-1.0.0-beta01\AndroidManifest.xml:29:13-37
 369            <meta-data
-369-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\e69ba8253eab6fa0150a3a055af31362\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:31:13-33:52
+369-->[androidx.emoji2:emoji2:1.0.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\306ba6a361e819bd85c227b0e7a6a28c\jetified-emoji2-1.0.0-beta01\AndroidManifest.xml:31:13-33:52
 370                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-370-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\e69ba8253eab6fa0150a3a055af31362\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:32:17-75
+370-->[androidx.emoji2:emoji2:1.0.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\306ba6a361e819bd85c227b0e7a6a28c\jetified-emoji2-1.0.0-beta01\AndroidManifest.xml:32:17-75
 371                android:value="androidx.startup" />
-371-->[androidx.emoji2:emoji2:1.0.0-alpha03] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\e69ba8253eab6fa0150a3a055af31362\jetified-emoji2-1.0.0-alpha03\AndroidManifest.xml:33:17-49
+371-->[androidx.emoji2:emoji2:1.0.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\306ba6a361e819bd85c227b0e7a6a28c\jetified-emoji2-1.0.0-beta01\AndroidManifest.xml:33:17-49
 372            <meta-data
-372-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\08791497052a8de1028d6f9933bc4895\jetified-lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:31:13-33:52
+372-->[androidx.lifecycle:lifecycle-process:2.4.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\43e19e8193963c22444d6d82693b0769\jetified-lifecycle-process-2.4.0-beta01\AndroidManifest.xml:31:13-33:52
 373                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-373-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\08791497052a8de1028d6f9933bc4895\jetified-lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:32:17-78
+373-->[androidx.lifecycle:lifecycle-process:2.4.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\43e19e8193963c22444d6d82693b0769\jetified-lifecycle-process-2.4.0-beta01\AndroidManifest.xml:32:17-78
 374                android:value="androidx.startup" />
-374-->[androidx.lifecycle:lifecycle-process:2.4.0-alpha02] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\08791497052a8de1028d6f9933bc4895\jetified-lifecycle-process-2.4.0-alpha02\AndroidManifest.xml:33:17-49
+374-->[androidx.lifecycle:lifecycle-process:2.4.0-beta01] C:\Users\Amey Thakur\.gradle\wrapper\caches\transforms-2\files-2.1\43e19e8193963c22444d6d82693b0769\jetified-lifecycle-process-2.4.0-beta01\AndroidManifest.xml:33:17-49
 375        </provider>
 376
 377        <uses-library

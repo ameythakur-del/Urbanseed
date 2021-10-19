@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.groceries.urabanseed.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -58,9 +59,8 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
         imageUrl = cartItem.getImageUrl();
 
         if (imageUrl != null) {
-            Picasso.get()
+            Glide.with(context)
                     .load(imageUrl)
-                    .fit()
                     .into(viewHolder.image);
         }
         else {

@@ -1,11 +1,13 @@
 package ui;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.groceries.urabanseed.R;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 import com.squareup.picasso.Picasso;
@@ -20,6 +22,7 @@ public class SliderAdapterExample extends
 
     private Context context;
     private List<Image> snacksList = new ArrayList<>();
+    String TAG = "Adapter";
 
     public SliderAdapterExample(Context context, List<Image> snacksList) {
         this.context = context;
@@ -55,10 +58,11 @@ public class SliderAdapterExample extends
 
         imageUrl = image.getImageUrl();
 
-        Picasso.get()
+        Log.d(TAG, "onBindViewHolder: Glide Started");
+        Glide.with(context)
                 .load(imageUrl)
-                .fit()
                 .into(viewHolder.image);
+        Log.d(TAG, "onBindViewHolder: Glide Ended");
     }
 
     @Override

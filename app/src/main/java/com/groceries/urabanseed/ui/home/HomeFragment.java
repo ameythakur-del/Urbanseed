@@ -1,11 +1,17 @@
 package com.groceries.urabanseed.ui.home;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
+import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +19,14 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +42,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.groceries.urabanseed.ContactUs;
+import com.groceries.urabanseed.CouponActivity;
+import com.groceries.urabanseed.GalleryFragment;
 import com.groceries.urabanseed.MyCart;
 import com.groceries.urabanseed.R;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -48,8 +61,13 @@ import model.Item;
 import ui.ItemRecyclerAdapter;
 import ui.SliderAdapterExample;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+
+
 public class HomeFragment extends Fragment {
 
+    final String CHANNEL_ID = "personal notifications";
+    final int NOTIFICATION_ID = 001;
     private RecyclerView recyclerView, recyclerview2;
     private EditText searchView;
     DatabaseReference reference,reference2, reference3;
@@ -62,47 +80,107 @@ public class HomeFragment extends Fragment {
     public List<Image> snacksList;
     DatabaseReference data = FirebaseDatabase.getInstance().getReference().child("Stop");
     DatabaseReference cartReference = FirebaseDatabase.getInstance().getReference().child("cart");
+    DatabaseReference historyReference = FirebaseDatabase.getInstance().getReference().child("Order History");
     float a, b, c;
     CardView cardView;
     TextView number, price;
     MaterialCardView linearLayout;
+    ItemRecyclerAdapter hospitalRecyclerAdapter;
+    private String TAG = "HomeFragment";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+        Log.d(TAG, "onCreateView: ");
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        cardView = (CardView) root.findViewById(R.id.cart_card);
-        mHandler = new Handler();
-        searchView = root.findViewById(R.id.search_bar);
 
-        price = root.findViewById(R.id.total_price);
-        linearLayout = root.findViewById(R.id.view_cart);
-        number = root.findViewById(R.id.number_items);
+        return root;
+    }
+
+    private void sendNotification(){
+        historyReference.child(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(!snapshot.exists()){
+                    createNotificationChannel();
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(), CHANNEL_ID);
+                    builder.setSmallIcon(R.drawable.transparent_logo);
+                    builder.setContentTitle("Here is a Surprise Offer for you!!");
+                    builder.setContentText("Tap on this notification and get 5% OFF on your first order");
+                    builder.setPriority(NotificationCompat.PRIORITY_HIGH);
+
+                    Intent intent = new Intent(getActivity(), CouponActivity.class);
+                    intent.putExtra("coupon", "9403768656");
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                    builder.setContentIntent(pendingIntent);
+                    builder.setAutoCancel(true);
+
+                    NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getActivity());
+                    notificationManagerCompat.notify(NOTIFICATION_ID, builder.build());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
+            CharSequence name = "Personal Notifications";
+            String description = "Include all personal notifications";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, name, importance);
+
+            notificationChannel.setDescription(description);
+
+            NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(notificationChannel);
+        }
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Log.d(TAG, "onViewCreated: 1");
+        cardView = (CardView) view.findViewById(R.id.cart_card);
+        mHandler = new Handler();
+        searchView = view.findViewById(R.id.search_bar);
+
+        price = view.findViewById(R.id.total_price);
+        linearLayout = view.findViewById(R.id.view_cart);
+        number = view.findViewById(R.id.number_items);
 
         reference2 = FirebaseDatabase.getInstance().getReference().child("Snacks");
-        recyclerView = root.findViewById(R.id.view);
+        recyclerView = view.findViewById(R.id.view);
         reference = FirebaseDatabase.getInstance().getReference().child("items");
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setNestedScrollingEnabled(false);
 
-        chipGroup = root.findViewById(R.id.chipGroup);
+        chipGroup = view.findViewById(R.id.chipGroup);
 
-        ProgressBar progressBar = root.findViewById(R.id.progress);
-        CardView cardView2 = root.findViewById(R.id.cardView8);
+        ProgressBar progressBar = view.findViewById(R.id.progress);
+        CardView cardView2 = view.findViewById(R.id.cardView8);
 
-        horizontal = root.findViewById(R.id.horizontal_view);
+        horizontal = view.findViewById(R.id.horizontal_view);
 
         reference3 = FirebaseDatabase.getInstance().getReference().child("Off Tag");
         final LinearLayoutManager layoutManager
                 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
 
 
-        FloatingActionButton fab = root.findViewById(R.id.fab2);
+        FloatingActionButton fab = view.findViewById(R.id.fab2);
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -125,15 +203,15 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-        data.addValueEventListener(new ValueEventListener() {
+        Log.d(TAG, "onViewCreated: Z");
+        data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue().toString().equals("True")){
                     {
                         {
                             {
-                                reference3.addValueEventListener(new ValueEventListener() {
+                                reference3.addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                         snacksList = new ArrayList<Image>();
@@ -161,15 +239,17 @@ public class HomeFragment extends Fragment {
                             }
                         }
                     }
+                    Log.d(TAG, "onDataChange: 3A");
                 }
 
                 else{
                     {
                         {
                             {
-                                reference2.addValueEventListener(new ValueEventListener() {
+                                reference2.addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        Log.d(TAG, "onDataChange: Z1");
                                         snacksList = new ArrayList<Image>();
                                         for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                                             {
@@ -186,12 +266,14 @@ public class HomeFragment extends Fragment {
                                         horizontal.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
                                         horizontal.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
                                         horizontal.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+                                        Log.d(TAG, "onDataChange: Z2");
                                     }
 
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError databaseError) {
                                     }
                                 });
+                                Log.d(TAG, "onDataChange: 3B");
                             }
                         }
                     }
@@ -204,9 +286,11 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        reference.addValueEventListener(new ValueEventListener() {
+
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d(TAG, "onDataChange: 30");
                 itemList = new ArrayList<Item>();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     {
@@ -216,88 +300,37 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 }
-                ItemRecyclerAdapter hospitalRecyclerAdapter = new ItemRecyclerAdapter(getActivity(), itemList);
+                hospitalRecyclerAdapter = new ItemRecyclerAdapter(getActivity(), itemList);
                 progressBar.setVisibility(View.INVISIBLE);
                 cardView2.setVisibility(View.VISIBLE);
                 recyclerView.setAdapter(hospitalRecyclerAdapter);
                 hospitalRecyclerAdapter.notifyDataSetChanged();
+                Log.d(TAG, "onDataChange: 40");
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
         chipGroup.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(ChipGroup chipGroup, int i) {
 
+                Log.d(TAG, "onDataChange: 50");
+
                 Chip chip = chipGroup.findViewById(i);
 
-                if(chip != null){
+                if(chip != null) {
                     tal = chip.getText().toString();
-
-                    if(tal.equals("All")){
-                        reference.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                itemList = new ArrayList<Item>();
-                                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                    {
-                                        Item item = dataSnapshot1.getValue(Item.class);
-                                        if(item.getVisibility().equals(true)) {
-                                            itemList.add(item);
-                                        }
-                                    }
-                                }
-                                ItemRecyclerAdapter hospitalRecyclerAdapter = new ItemRecyclerAdapter(getActivity(), itemList);
-                                progressBar.setVisibility(View.INVISIBLE);
-                                cardView2.setVisibility(View.VISIBLE);
-                                recyclerView.setAdapter(hospitalRecyclerAdapter);
-                                hospitalRecyclerAdapter.notifyDataSetChanged();
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-                    }
-
-                    else {
-                        Query query = reference.orderByChild("category").equalTo(tal);
-
-                        query.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                itemList = new ArrayList<Item>();
-                                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                    {
-                                        Item item = dataSnapshot1.getValue(Item.class);
-                                        if(item.getVisibility().equals(true)) {
-                                            itemList.add(item);
-                                        }
-                                    }
-                                }
-                                ItemRecyclerAdapter itemRecyclerAdapter = new ItemRecyclerAdapter(getActivity(), itemList);
-                                recyclerView.setAdapter(itemRecyclerAdapter);
-                                itemRecyclerAdapter.notifyDataSetChanged();
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-                    }
+                    hospitalRecyclerAdapter.filterList(tal);
                 }
+                Log.d(TAG, "onDataChange: 60");
             }
         });
 
-        reference.addValueEventListener(new ValueEventListener() {
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d(TAG, "onDataChange: 70");
                 itemList = new ArrayList<Item>();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     {
@@ -339,6 +372,7 @@ public class HomeFragment extends Fragment {
 
                     }
                 });
+                Log.d(TAG, "onDataChange: 80");
             }
 
             @Override
@@ -347,11 +381,14 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        Log.d(TAG, "onDataChange: 5");
+
         if(FirebaseAuth.getInstance().getCurrentUser() != null){
             Query query = cartReference.orderByChild("userPhone");
             query.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Log.d(TAG, "onDataChange: 90");
                     int count = 0;
                     c=0;
                     for (DataSnapshot dataSnapshot1 : snapshot.getChildren()) {
@@ -373,14 +410,19 @@ public class HomeFragment extends Fragment {
                         String a = String.valueOf(count);
                         number.setText(a + " item");
                         fab.setTranslationY(-150);
+
+                        sendNotification();
                     }
                     else {
                         fab.setTranslationY(-150);
                         String a = String.valueOf(count);
                         number.setText(a + " items");
+
+                        sendNotification();
                     }
                     String k = String.valueOf(Math.round(c));
                     price.setText("\u20B9"+k);
+                    Log.d(TAG, "onDataChange: 100");
                 }
 
                 @Override
@@ -395,8 +437,6 @@ public class HomeFragment extends Fragment {
                 }
             });
         }
-
-        return root;
+        Log.d(TAG, "onDataChange: 6");
     }
-
 }

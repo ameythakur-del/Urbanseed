@@ -18,10 +18,8 @@
     </style>
 
     <style name="mainActivity" parent="Theme.AppCompat.Light">
-        <item name="android:statusBarColor">#F3FFF2</item>
         <item name="windowNoTitle">true</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:windowLightStatusBar">true</item>
         <item name="fontFamily">@font/varela_round</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>

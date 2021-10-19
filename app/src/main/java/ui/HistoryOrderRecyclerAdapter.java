@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
@@ -56,9 +57,8 @@ public class HistoryOrderRecyclerAdapter extends RecyclerView.Adapter<HistoryOrd
                         String imageUrl = snapshot.child("imageUrl").getValue().toString();
 
                         if (imageUrl != null) {
-                            Picasso.get()
+                            Glide.with(context)
                                     .load(imageUrl)
-                                    .fit()
                                     .into(viewHolder.imageView);
                         }
                     }

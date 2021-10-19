@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.groceries.urabanseed.Activity2;
 import com.groceries.urabanseed.MyCart;
@@ -63,9 +64,8 @@ public class WishRecyclerAdapter extends RecyclerView.Adapter<WishRecyclerAdapte
 
 
         if (imageUrl != null) {
-            Picasso.get()
+            Glide.with(context)
                     .load(imageUrl)
-                    .fit()
                     .into(viewHolder.image);
         }
         else {

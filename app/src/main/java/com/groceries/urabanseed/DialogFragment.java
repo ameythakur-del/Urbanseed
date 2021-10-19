@@ -29,6 +29,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -68,12 +69,12 @@ public class DialogFragment extends androidx.fragment.app.DialogFragment impleme
     String amey=null, price, mrp;
     ImageView image;
 
-    public static DialogFragment newInstance(Item item) {
+    public DialogFragment(Item item) {
         DialogFragment frag = new DialogFragment();
         Bundle args = new Bundle();
         frag.setItem(item);
         frag.setArguments(args);
-        return frag;
+        this.item = item;
     }
 
     private void setItem(Item item) {
@@ -120,6 +121,8 @@ public class DialogFragment extends androidx.fragment.app.DialogFragment impleme
         ViewGroup.LayoutParams params = getDialog().getWindow().getAttributes();
         params.width = ViewGroup.LayoutParams.MATCH_PARENT;
         getDialog().getWindow().setAttributes((android.view.WindowManager.LayoutParams) params);
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         // Show soft keyboard automatically and request focus to field
         getDialog().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
@@ -139,25 +142,15 @@ public class DialogFragment extends androidx.fragment.app.DialogFragment impleme
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         databaseReference = FirebaseDatabase.getInstance().getReference().child("items").child(item.getItem());
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                title.setText(snapshot.child("item").getValue().toString());
-                description.setText(snapshot.child("taste").getValue().toString());
-                delivery.setText(snapshot.child("delivery").getValue().toString());
-                if (snapshot.child("imageUrl").getValue() != null) {
-                    Picasso.get()
-                            .load(snapshot.child("imageUrl").getValue().toString())
-                            .fit()
-                            .into(image);
-                }
-            }
+        title.setText(item.getItem());
+        description.setText(item.getTaste());
+        delivery.setText(item.getDelivery());
+        if (item.getImageUrl() != null) {
+            Glide.with(getActivity())
+                    .load(item.getImageUrl())
+                    .into(image);
+        }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
         databaseReference = databaseReference.child("Quantity");
 

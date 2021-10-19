@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Paint;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,15 +33,34 @@ import java.util.List;
 
 import model.Item;
 
+import static android.content.ContentValues.TAG;
+
 public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapter.ViewHolder> implements Filterable {
     private Context context;
     private List<Item> itemList;
     private List<Item> itemListFull;
+    private List<Item> itemListOriginal;
 
     public ItemRecyclerAdapter(Context context, List<Item> itemList) {
         this.context = context;
         this.itemList = itemList;
         itemListFull = new ArrayList<>(itemList);
+        this.itemListOriginal = itemList;
+    }
+
+    public void filterList(String cat){
+        if(cat.equals("All")){
+            itemList = itemListOriginal;
+        }
+        else {
+            itemList = new ArrayList<Item>();
+            for (Item item : itemListOriginal) {
+                if (item.getCategory().equals(cat)) {
+                    itemList.add(item);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -286,7 +306,7 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
 
                     else {
                         FragmentManager fm = ((FragmentActivity) context).getSupportFragmentManager();
-                        DialogFragment editNameDialogFragment = DialogFragment.newInstance(item);
+                        DialogFragment editNameDialogFragment = new DialogFragment(item);
                         editNameDialogFragment.show(fm, "fragment_edit_name");
                     }
                 }

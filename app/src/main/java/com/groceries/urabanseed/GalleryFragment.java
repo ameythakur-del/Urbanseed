@@ -257,7 +257,7 @@ public class GalleryFragment extends AppCompatActivity {
 
 
             data = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUserPhone);
-            data.addValueEventListener(new ValueEventListener() {
+            data.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()) {
@@ -333,13 +333,14 @@ public class GalleryFragment extends AppCompatActivity {
                                 NotificationCompat.Builder builder = new NotificationCompat.Builder(GalleryFragment.this, CHANNEL_ID);
                                 builder.setSmallIcon(R.drawable.transparent_logo);
                                 builder.setContentTitle("Thank you for ordering with us !");
-                                builder.setContentText("Share your experience with our taste and service here");
-                                builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                                builder.setContentText("Share your experience with our products and service here");
+                                builder.setPriority(NotificationCompat.PRIORITY_HIGH);
 
                                 Intent intent = new Intent(GalleryFragment.this, ContactUs.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_GRANT_READ_URI_PERMISSION);
                                 PendingIntent pendingIntent = PendingIntent.getActivity(GalleryFragment.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
                                 builder.setContentIntent(pendingIntent);
+                                builder.setAutoCancel(true);
 
                                 NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(GalleryFragment.this);
                                 notificationManagerCompat.notify(NOTIFICATION_ID, builder.build());
@@ -350,13 +351,14 @@ public class GalleryFragment extends AppCompatActivity {
                                 NotificationCompat.Builder builder = new NotificationCompat.Builder(GalleryFragment.this, CHANNEL_ID);
                                 builder.setSmallIcon(R.drawable.transparent_logo);
                                 builder.setContentTitle("Sorry, We can't place your order");
-                                builder.setContentText("We are currently not serving in your area. Inconvenience regretted!");
-                                builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                                builder.setContentText("Tap here to knowe more");
+                                builder.setPriority(NotificationCompat.PRIORITY_HIGH);
 
                                 Intent intent = new Intent(GalleryFragment.this, ContactUs.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 PendingIntent pendingIntent = PendingIntent.getActivity(GalleryFragment.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
                                 builder.setContentIntent(pendingIntent);
+                                builder.setAutoCancel(true);
 
                                 NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(GalleryFragment.this);
                                 notificationManagerCompat.notify(NOTIFICATION_ID, builder.build());

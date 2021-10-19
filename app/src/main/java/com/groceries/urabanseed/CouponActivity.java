@@ -58,6 +58,11 @@ public class CouponActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         editText = findViewById(R.id.referral_number);
+
+        if(getIntent().hasExtra("coupon")){
+            editText.setText(getIntent().getStringExtra("coupon"));
+        }
+
         button3 = findViewById(R.id.refferal_button3);
         back = findViewById(R.id.referral_back);
 

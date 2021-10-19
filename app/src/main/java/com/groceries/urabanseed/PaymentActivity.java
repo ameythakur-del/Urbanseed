@@ -117,6 +117,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
                     builder.setContentTitle("Thank you for ordering with us!");
                     builder.setContentText("We are coming soon..");
                     builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                    builder.setAutoCancel(true);
 
                     Intent fintent = new Intent(PaymentActivity.this, ContactUs.class);
                     fintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -151,6 +152,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
         builder2.setContentTitle("Thank you for ordering with us !");
         builder2.setContentText("We are coming soon...");
         builder2.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        builder2.setAutoCancel(true);
 
         Intent fintent = new Intent(PaymentActivity.this, ContactUs.class);
         fintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
